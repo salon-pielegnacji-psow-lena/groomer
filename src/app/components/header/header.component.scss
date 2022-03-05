@@ -1,0 +1,85 @@
+@import "../../../styles.scss";
+
+.header {    
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    box-shadow: 0.3px 0.3px 5px 0.3px $box-shadow-color-light;
+    z-index: 200;
+    background-color: white;
+}
+.logo {   
+    background-size: contain;
+    position: absolute;
+    margin: 7px;
+    width: 65px;
+    height: 65px;
+}
+.brand {    
+  position: absolute;
+  width: 50%;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 25%;
+  font-size: 16px; 
+}
+.brand-description {
+  font-family: 'Monotype Corsiva';
+  font-style: italic;
+  font-size: 24px;  
+}
+.facebook {
+  margin-top: 17px;
+}
+.slide-down {    
+  animation: slide-down 0.5s forwards;
+  animation-delay: 0s;
+  top: -81px;   
+}
+.slide-up {   
+  animation: slide-up 0.5s forwards;
+  animation-delay: 0s;
+  top: -1px;   
+}
+@keyframes slide-down {
+  100% { top: -1px; }
+}
+@keyframes slide-up {     
+  100% { top: -81px; }
+}
+
+@media screen and (max-width: $tablet-width) {
+  .logo {
+    position: absolute;
+    margin-top: 3px;
+    width: 46px;
+    height: 46px;    
+  }
+  .header {   
+    height: 50px;
+  }
+  .brand {
+    display: none;
+  }
+  .facebook {
+    margin-top: 2.5px;
+  }
+}
+
+@media screen and (max-height: $mobile-landscape-min-height) {
+  .logo {
+    position: absolute;
+    margin-top: 3px;
+    width: 46px;
+    height: 46px;    
+  }
+  .header {   
+    height: 50px;
+  }
+  .brand {
+    display: none;
+  }
+  .facebook {
+    margin-top: 2.5px;
+  }
+}

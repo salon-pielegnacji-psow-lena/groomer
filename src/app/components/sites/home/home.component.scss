@@ -1,0 +1,178 @@
+@import "../../../../styles.scss";
+
+.size {
+    height: 80vh;
+    width: 100%;  
+}
+.blank {
+    height: 20vh;
+    width: 100%;
+}
+.name {
+    font-style: italic;
+    font-family:'papyrus';
+    color:white;
+}
+.home {
+    @extend .size;    
+    justify-content: center;
+    align-items: center;
+    z-index: 0;     
+}
+.home-background {
+    @extend .size; 
+    position: absolute;
+    z-index: -1;
+}
+.home-img {   
+    background-image: url("../../../../assets/images/start.webp");
+    background-size: cover;
+    box-shadow: 2px 2px 15px 1px $box-shadow-color;
+    margin-top: 26vh; 
+    width: $home-image-width;
+    height: $home-image-height; 
+    border-radius: 5px;
+}
+.logo {   
+    background-size: contain;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px 2px $box-shadow-color;
+    background-color: white;
+}
+.brand {    
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin-top: 46px;
+    font-size: 30px; 
+}
+.brand .phone {
+    margin-left: 10px;
+    font-size: 14px; 
+    font-family:'Segoe UI', Arial, Helvetica, sans-serif, Geneva, Verdana, sans-serif; 
+    font-style: none;
+}
+.brand-description {
+    font-family: 'Monotype Corsiva';
+    font-style: italic;
+    font-size: 64px;  
+}
+.copy-position {
+    padding-top: 17vh;    
+}
+.arrow {
+    font-size: 30px;
+    color: $main-color-gray;   
+    animation: arrow-animated 1s infinite;
+    animation-delay: 0.5s;     
+    position: absolute;
+    text-align: center;
+    width: 100%;     
+  }
+  @keyframes arrow-animated {
+    0% { padding-top: 8vh; }
+    50% { padding-top: 10vh; }
+    100% {padding-top: 8vh; }
+  }
+
+@media screen and (max-width: $mobile-width) {
+    .home-img {       
+        float: right;
+        margin: auto; 
+        height: 70vh;
+        margin-top: 150px;
+    }
+    .logo {
+        width: 48px;
+        height: 48px;
+    }
+    .brand {   
+        margin-top: 50px; 
+        font-size: 20px; 
+    }
+    .brand-description {
+        font-size: 34px;
+    }
+    .copy-position {
+        padding-top: 12vh;    
+    }
+}
+@media screen and (min-width: $mobile-width-plus-one) and (max-width: $tablet-width) {
+    .home-img {       
+        float: right;
+        margin-right: 5%;       
+        width: calc(#{$home-image-width} - 5%);
+        height: calc(#{$home-image-height} - 5%);
+        margin-top: 28vh; 
+    }
+    .logo {
+        width: 90px;
+        height: 90px;
+    }
+    .brand {
+        margin-top: 60px; 
+        font-size: 24px;
+    }
+}
+@media screen and (min-width: $tablet-width-plus-one) and (max-width: $small-pc-width) {
+    .home-img {
+        float: right;
+        margin-right: 5%;      
+        width: calc(#{$home-image-width} - 3%);
+        height: calc(#{$home-image-height} - 3%);
+        margin-top: 28vh;
+    }
+    .logo {
+        width: 140px;
+        height: 140px;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+    .brand {
+        margin-top: 70px; 
+        font-size: 27px;
+    }
+}
+@media screen and (min-width: $small-pc-width-plus-one) and (max-width: $pc-width) {
+    .home-img {
+        float: right;
+        margin-right: 5%; 
+    }
+    .logo {
+        width: 180px;
+        height: 180px;
+        margin-top: 30px;
+        margin-left: 5%;             
+    }
+}
+@media screen and (min-width: $pc-width-plus-one) {
+    .home-img {
+        float: right;
+        margin-right: 13%;  
+    }
+    .logo {
+        width: 180px;
+        height: 180px;
+        margin-top: 30px;
+        margin-left: 13.5%;             
+    }
+}
+@media screen and (max-height: $mobile-landscape-min-height) {
+    .home-img {
+        display: none;
+    }    
+    .copy-position {
+        padding-top: 12vh;    
+    }
+    @keyframes arrow-animated {
+        0% { padding-top: 0vh; }
+        50% { padding-top: 3vh; }
+        100% {padding-top: 0vh; }
+      }
+}
+@media screen and (min-height: $mobile-landscape-min-height-plus-one) and (max-height: $mobile-landscape-max-height) {
+    .home-img {
+        transform: scale(0.7);
+    }    
+}

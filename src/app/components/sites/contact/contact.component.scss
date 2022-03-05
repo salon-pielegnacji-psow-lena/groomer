@@ -1,0 +1,195 @@
+@import "../../../../colors.scss";
+@import "../../../../sizes.scss";
+
+.blank {
+    height: 100vh;
+    width: 100%;
+}
+.size {
+    height: 70vh;
+    width: 100%;    
+    bottom: 0;
+    position: absolute;
+}
+.contact {
+    @extend .size;    
+    justify-content: center;
+    align-items: center;
+    z-index: 0;     
+}
+.background {
+    @extend .size;       
+}
+.content { 
+    position: absolute; 
+    display: flex;
+    color: black;
+    z-index: 1;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%; 
+}
+.copy-position{
+    bottom: 20px;
+}
+.box {    
+    width:  72vw;
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: 0.3px 0.3px 5px 0.3px $box-shadow-color-medium;
+    background-color: white;
+}
+.info {
+    @extend .box;
+    left: 14vw;
+    right: 0vw;
+    top: -15vh;
+    padding-top: 7vh;
+}
+.map {
+    @extend .box;
+    left: 14vw;
+    right: 0vw;
+    top: 25vh;
+}
+.phone {
+    font-size: 20px;    
+}
+.facebook { 
+    cursor: pointer;
+}
+.facebook:hover {
+    color: rgb(17,120,242);
+    transform: scale(1.05);
+}
+.icon {          
+    color: rgb(17,120,242);  
+}
+@media screen and (max-width: $mobile-width) {
+    .info {    
+        height: 35vh;
+        width: 92vw;     
+        left: 3vw;
+        right: auto;
+        top: -23vh;       
+        padding: 2vh 1vw;
+    }
+    .map {    
+        height: 40vh;
+        width: 94vw;
+        left: 3vw;
+        right: auto;
+        top: 18vh;
+    }
+    .copy-position {
+        max-width: 80vw;
+        left: 10vw;
+    }    
+}
+@media screen and (min-width: $mobile-width) and (max-width: $tablet-width) {
+    .info {    
+        height: 35vh;
+        width: 84vw;     
+        left: 7vw;
+        right: auto;
+        top: -18vh;       
+        padding: 4vh 1vw 0;
+    }
+    .map {    
+        height: 40vh;
+        width: 86vw;
+        left: 7vw;
+        right: auto;
+        top: 24vh;
+    }   
+}
+@media screen and (min-width: $tablet-width) and (max-width: $small-pc-width) {
+    .info {    
+        height: 35vh;
+        width: 55vw;     
+        left: 21vw;
+        right: auto;
+        top: -18vh;       
+        padding: 4vh 1vw 0;
+    }
+    .map {    
+        height: 40vh;
+        width: 80vw;
+        left: 9vw;
+        right: auto;
+        top: 24vh;
+    } 
+}
+@media screen and (min-width: $small-pc-width) and (max-width: $pc-width) {
+    .info {    
+        height: 35vh;
+        width: 36vw;     
+        left: 30vw;
+        right: auto;
+        top: -18vh;       
+        padding: 4vh 1vw 0;
+    }
+    .map {    
+        height: 40vh;
+        width: 64vw;
+        left: 17vw;
+        right: auto;
+        top: 24vh;
+    } 
+}
+@media screen and (min-width: $pc-width) {
+    .box {     
+        width:  56vw;      
+    }
+    .info {    
+        height: 35vh;    
+        left: 30vw;
+        right: auto;
+        top: -18vh;
+        width: 36vw; 
+        padding: 4vh 1vw 0;
+    }
+    .map {    
+        height: 40vh;
+        left: 21vw;
+        right: auto;
+        top: 24vh;
+    } 
+}
+@media screen and (max-height: $mobile-landscape-min-height) {
+    .info { 
+        width:  39vw;  
+        height: 64vh; 
+        left: 3vw;
+        right: auto;
+        top: -11vh;
+        padding: 7vh 3vw 0;
+    }
+    .map {     
+        width:  45vw;
+        height: 71vh; 
+        left: auto;
+        right: 3vw;
+        top: -11vh;
+    }
+    .info p {
+        margin: 8px;
+    } 
+}
+@media screen and (min-height: $mobile-landscape-min-height-plus-one) and (max-height: $mobile-landscape-max-height) and (min-width: $tablet-width) {
+    .info { 
+        width:  39vw;  
+        height: 56vh; 
+        left: 3vw;
+        right: auto;
+        top: -11vh;
+        padding: 15vh 3vw 0;
+    }
+    .map {     
+        width:  45vw;
+        height: 71vh; 
+        left: auto;
+        right: 3vw;
+        top: -11vh;
+    }  
+}

@@ -1,0 +1,20 @@
+<main [ngClass]="[theme.getTheme(), theme.getLogo()]">   
+    <app-go-to-top></app-go-to-top>
+    <app-header></app-header>
+    <section id="start" #start>
+        <app-home></app-home>
+    </section>
+    <section id="omnie" #omnie>
+        <app-about></app-about>
+    </section>
+    <section id="oferta" #oferta>
+        <app-offer></app-offer>
+    </section>
+    <section id="wiecej" #wiecej>
+        <app-more></app-more>
+    </section>
+    <section id="kontakt" #kontakt>
+        <app-contact></app-contact>
+    </section>
+</main>
+<app-paws></app-paws>

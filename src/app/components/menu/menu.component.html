@@ -1,0 +1,11 @@
+<ul *ngIf="render" [ngClass]="classes">
+    <li *ngFor="let section of scrollService.getSections()" (click)="scrollService.goToView(section.name)"  class="link noselect" title="{{section.description}}">
+        <div [id]="'menu-' + section.name" class="description noselect" [ngClass]="{'active-link': scrollService.isActive(section.name)}">{{section.description}}</div>
+    </li>
+</ul>
+<ul *ngIf="render" class="themes">
+    <li *ngFor="let t of theme.themes" (click)="theme.setTheme(t)" class="theme" [ngClass]="t"></li>
+</ul>
+<ul *ngIf="render" class="logos">
+    <li *ngFor="let l of theme.logos" (click)="theme.setLogo(l)" class="theme" [ngClass]="l"></li>
+</ul>

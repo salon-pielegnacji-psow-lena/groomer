@@ -1,0 +1,16 @@
+<div class="home">
+    <div class="home-background"></div>
+    <div class="logo"></div> 
+    <app-menu *ngIf="!header.isShown()"></app-menu>
+    <app-facebook [fontSize]="40"></app-facebook>
+    <div class="brand">
+        <span class="brand-description">Lena</span>
+        <div>Salon Pielęgnacji Psów</div>
+        <div class="name">Beata Zdrowak<span class="phone"><app-phone></app-phone></span></div>       
+    </div> 
+    <div class="home-img"></div>
+</div>
+<div class="blank">
+    <div class="arrow"><fa-icon [icon]="faAngleDoubleDown" ></fa-icon></div>
+    <div copyRights class="copy-position main-color-gray"></div>
+</div>
