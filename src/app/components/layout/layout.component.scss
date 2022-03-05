@@ -1,0 +1,44 @@
+@import "../../../styles.scss";
+.logos {
+    position: absolute;
+    bottom: 40px;
+    right: 5px;
+    list-style-type: none;    
+    text-align: left;  
+    padding-inline-start: 0;  
+    display: flex;
+    flex-direction: row;
+    z-index: 300;
+}
+.themes {
+    position: absolute;
+    bottom: 60px;
+    right: 5px;
+    list-style-type: none;    
+    text-align: left;  
+    padding-inline-start: 0;  
+    display: flex;
+    flex-direction: row;
+    z-index: 300;
+}
+.theme {
+    border-radius: 50%; 
+    height: 15px;
+    width: 15px;
+    margin:3px
+}
+.themes .color-theme {
+    background-color: fuchsia;
+}
+.themes .gray-theme {
+    background-color: gray;
+}
+.themes .sepia-theme {
+    background-color:  #f1dec0;
+}
+.logos .new-logo-theme {
+    background-color:  $main-color;
+}
+.logos .original-logo-theme {
+    background-color:  #db5f0d;
+}

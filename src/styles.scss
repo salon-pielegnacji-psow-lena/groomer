@@ -87,10 +87,7 @@ body {
     }
 }
 @mixin logo-themes($original) {
-    @if $original == true {
-        .logo {
-            background-image: url("./assets/images/logo.png");
-        }
+    @if $original == true {        
         .brand-description {  
             color: $oryginal-main-color;
         }
@@ -98,10 +95,7 @@ body {
             color: $oryginal-main-color;           
         }
         
-    } @else {
-        .logo {
-            background-image: url("./assets/images/logov.png");
-        }
+    } @else {        
         .brand-description {  
             color: $main-color;
         }
