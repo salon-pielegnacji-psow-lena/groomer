@@ -54,7 +54,7 @@
 
 @media screen and (max-width: $mini-mobile-width) {
     .about {      
-        min-height: 130vh; 
+        min-height: 110vh; 
     }
     .main {
         flex-wrap: wrap;
@@ -145,7 +145,7 @@
 }
 @media screen and (max-height: $mobile-landscape-min-height) {
     .about {        
-        min-height: 130vh; 
+        min-height: 110vh; 
     }
     .main {
         margin: -7vh 0 0 0;
@@ -170,7 +170,7 @@
 }
 @media screen and (min-height: $mobile-landscape-min-height-plus-one) and (max-height: $mobile-landscape-max-height) and (min-width: $tablet-width) {
     .about {
-        height: 120vh; 
+        height: 110vh; 
     }
     .main {
         margin: -7vh 0 0 0;
