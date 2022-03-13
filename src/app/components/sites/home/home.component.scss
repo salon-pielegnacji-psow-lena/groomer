@@ -45,7 +45,7 @@
     position: absolute;
     width: 100%;
     text-align: center;
-    margin-top: 46px;
+    margin-top: 6px;
     font-size: 30px; 
 }
 .brand .phone {
@@ -76,24 +76,38 @@
     50% { padding-top: 10vh; }
     100% {padding-top: 8vh; }
   }
-
+.quote {
+    font-size: 13px;
+    font-style: italic;
+    position: absolute;
+    top: 150px;
+    text-align: center;
+    width: 80%;
+    left: 10%;
+}
 @media screen and (max-width: $mobile-width) {
     .home-img {       
         float: right;
         margin: auto; 
         height: 70vh;
-        margin-top: 150px;
+        margin-top: 160px;
     }
     .logo {
         width: 48px;
         height: 48px;
     }
     .brand {   
-        margin-top: 50px; 
+        margin-top: 30px; 
         font-size: 20px; 
     }
     .brand-description {
         font-size: 34px;
+    }
+    .quote {
+        top: 115px;
+        font-size: 10px;
+        width: 100%;
+        left: 0;
     }
     .copy-position {
         padding-top: 12vh;    
@@ -112,8 +126,11 @@
         height: 90px;
     }
     .brand {
-        margin-top: 60px; 
+        margin-top: 40px; 
         font-size: 24px;
+    }
+    .quote {
+        top: 160px;
     }
 }
 @media screen and (min-width: $tablet-width-plus-one) and (max-width: $small-pc-width) {
@@ -131,8 +148,11 @@
         margin-left: 15px;
     }
     .brand {
-        margin-top: 70px; 
+        margin-top: 40px; 
         font-size: 27px;
+    }
+    .quote {
+        top: 170px;
     }
 }
 @media screen and (min-width: $small-pc-width-plus-one) and (max-width: $pc-width) {
