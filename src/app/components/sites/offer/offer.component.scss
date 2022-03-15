@@ -3,7 +3,7 @@
 
 .offer {
     width: 100%;
-    height: 100vh;         
+    min-height: 100vh;         
 }
 .box { 
     margin-top: 15vh; 
@@ -12,8 +12,7 @@
     color: black;
     z-index: 1;
     justify-content: space-around;   
-    font-size: 18px;  
-    min-height: 80vh;   
+    font-size: 18px;     
 }
 .left { 
     left: 0;
@@ -29,17 +28,27 @@
     width: 80vw;
     max-width: 800px;
 }
+.bottom { 
+    margin: 0 auto;
+    margin-top: 1vh;
+    color: black;
+    z-index: 1;
+    justify-content: space-around;   
+    left: 0;
+    display: table;
+    flex-direction: column;
+    width: 80vw;
+    max-width: 800px;
+}
 .title {
     top: 15vh;   
     text-align: center;
     position: relative;
 }
 ul {  
-    list-style: none;
     padding-inline-start: 0;
 }
 ul li::before {
-    content: "✂ ";
     opacity: 0.5;
     font-size: 16px;
     margin-bottom: 3px;
@@ -47,8 +56,11 @@ ul li::before {
 ul li {
     margin: 5px;
 }
-.copy-position {
-    margin-top: 6vh;    
+.italic {
+    font-style: italic;
+}
+.underline {
+    text-decoration: underline;
 }
 @media screen and (max-width: $mobile-width) {
     .title {
@@ -56,42 +68,39 @@ ul li {
     }
     .box { 
         margin-top: 7vh;  
-        font-size: 16px; 
-        min-height: 74vh;          
+        font-size: 14px;         
     }
     .left {  
         padding: 0 3vw;
-        width: 94vw;
     }
     .right { 
         padding: 0 3vw;
-        width: 94vw;
     }  
-    .button-position {  
-        position: absolute;   
-        width: 80%;
-        left: 10%;
-    }       
+    .bottom {
+        margin-top: 1vh;  
+        font-size: 14px; 
+        padding: 0 1vw;
+        width: 92vw;
+    }      
 }
 @media screen and (min-width: $mobile-width) and (max-width: $pc-width) {
-    .box {      
-        min-height: 70vh;   
+    .box {        
         font-size: 14px;
     }  
-    .button-position {  
-        position: absolute;   
-        width: 40%;
-        left: 30%;
-    }  
+    .bottom {
+        margin-top: 1vh;  
+        font-size: 14px; 
+        padding: 0 3vw;
+    } 
 }
 @media screen and (min-width: $pc-width) {
     .box {
-        min-height: 70vh;   
+        min-height: 5vh;   
     } 
-    .button-position {  
-        position: absolute;   
-        width: 30%;
-        left: 35%;
+    .bottom {
+        margin-top: 3vh;  
+        font-size: 18px; 
+        padding: 0 3vw;
     }     
 }
 @media screen and (max-height: $mobile-landscape-min-height) {
@@ -116,12 +125,11 @@ ul li {
         padding: 0 1vw;
         width: 48vw;
     } 
-    .contact-button { 
-        margin-top: -9vh;     
-    } 
-    .copy-position {
-        margin-top: 12vh;    
-    } 
+    .bottom {
+        margin-top: 7vh;  
+        font-size: 14px; 
+        padding: 0 3vw;
+    }  
 }
 @media screen and (min-height: $mobile-landscape-min-height-plus-one) and (max-height: $mobile-landscape-max-height) and (min-width: $tablet-width) {
     .title {
@@ -144,10 +152,9 @@ ul li {
         padding: 0 1vw;
         width: 48vw;
     } 
-    .contact-button {       
-        margin-top: 0vh;
-    }  
-    .copy-position {
-        margin-top: 8vh;    
-    }
+    .bottom {
+        margin-top: 7vh;  
+        font-size: 14px; 
+        padding: 0 3vw;
+    } 
 }

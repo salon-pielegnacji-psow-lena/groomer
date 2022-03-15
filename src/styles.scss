@@ -4,8 +4,12 @@
 body {
     font-family:'Segoe UI', Arial, Helvetica, sans-serif, Geneva, Verdana, sans-serif; 
     margin: 0;
-    position: relative;   
+    top:0;
+    left: 0;
+    position: absolute;   
     min-width: 330px; 
+    width: 100%;
+    max-width: 100%;
 }
 .center-text {
     text-align: center;

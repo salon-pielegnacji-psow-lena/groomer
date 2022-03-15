@@ -21,6 +21,7 @@ import { MoreComponent } from './components/sites/more/more.component';
 import { FacebookComponent } from './components/facebook/facebook.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { PhoneComponent } from './components/phone/phone.component';
+import { TableComponent } from './components/table/table.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { PhoneComponent } from './components/phone/phone.component';
     MoreComponent,
     FacebookComponent,
     GalleryComponent,
-    PhoneComponent
+    PhoneComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,

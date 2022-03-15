@@ -1,27 +1,54 @@
 <div class="offer">
-    <h4 class="title">Salon "LENA" oferuje</h4>
-    <article class="box">        
+    <h3 class="title">OFERTA</h3>
+    <article class="box">
         <ul>
             <aside class="left">
                 <li>Strzyżenie psów rasowych zgodnie z wzorcem FCI</li>
                 <li>Strzyżenie psów z dobraniem odpowiedniej fryzurki jak i uwzględnienie życzeń Właściciela</li>
                 <li>Trymowanie psów szorstkowłosych</li>
                 <li>Rozczesywanie skołtunionej sierści</li>
-                <li>Wyczesywanie z usunięciem podszerstka metodą coat - king</li>
+                <li>Wyczesywanie z usunięciem podszerstka</li>
             </aside>
             <aside class="right">
-                <li>Kąpiele kosmetyczne</li>
-                <li>Kosmetyka</li>
-                <li>Przy każdej pełnej wizycie tj. kąpiel, wyczesywanie, strzyżenie - obcinanie pazurków i czyszczenie
-                    uszu
-                    GRATIS!</li>
-                <li>Akcesoria do pielęgnacji psiej szaty, oraz odpowiednie szampony i odżywki</li>
-                <li>Fachowe porady w zakresie pielęgnacji psów</li>
+                <li>Kąpiele</li>
+                <li>Kosmetyka oczu, uszu oraz opuszek łapek z obcięciem pazurów</li>
+                <li>Przy pełnej kompleksowej usłudze czyszczenie uszu i obcięcie pazurów-gratis!</li>
+                <li>Akcesoria do pielęgnacji psiej szaty grzebienie, szczotki oraz odpowiednie dla gatunku szaty
+                    szampony i odżywki</li>
+                <li>W ofercie gratisowe porady w zakresie pielęgnacji</li>
             </aside>
+
         </ul>
     </article>
-    <div class="contact-button">
-        <app-button class="button-position"  (onClick)='scrollService.goToView("kontakt")'>Zapraszam do kontaktu</app-button>    
-    </div>
-    <div copyRights class="copy-position main-color-gray"></div>
+    <section class="bottom">
+        <p>Pierwsza wizyta szczeniaka tzw. ZAPOZNANIE w wieku 3-4 miesiące (po wszystkich szczepieniach) to koszt
+            40-50 zł. Ma na celu zapoznanie ze stołem groomerskim, wysokością, narzędziami, suszarką oraz kosmetykę
+            oczu, uszu, opuszek łap i obcięcie pazurów. Przede wszystkim w spokojnej atmosferze jest to
+            przyzwyczajenie do dotyku oraz zapoznanie ze mną i zaprzyjaźnienie się 😊
+        </p>
+    </section>
+    <h3 class="center-text">CENNIK</h3>
+    <section class="bottom">
+        <p>Podane ceny są cenami orientacyjnymi i mają charakter informacyjny nie stanowią oferty handlowej w rozumieniu
+            Art.66 par.1 Kodeksu Cywilnego. Cena usługi może ulec zmianie jeżeli na miejscu w Salonie okaże się, że
+            szata pieska jest skołtuniona, gdy piesek znacznie odbiega od określonej rasy (wielkością i ilością szaty)
+            lub jeżeli zachowanie pieska znacznie opóźni czas wykonania usługi.
+        </p>
+        <p>Wszystkie usługi wykonywane w Salonie są kompleksowe i obejmują: wyczesanie, kąpiel z suszeniem, modelowanie
+            fryzury, strzyżenie/trymowanie, kosmetyka uszu i łap, obcięcie pazurów.
+        </p>
+        <p class="center-text underline">Usługa kompleksowa ze strzyżeniem i modelowaniem</p>
+        <app-table [border]="true" [rows]="cutting"></app-table>
+        <p class="center-text underline">Usługa kompleksowa z trymowaniem i modelowaniem</p>
+        <app-table [border]="true" [rows]="modeling"></app-table>
+        <p class="center-text underline">Inne</p>
+        <app-table [border]="true" [rows]="other"></app-table>
+        <p>Jeżeli sierść psa jest skołtuniona, sfilcowana lub pies jest agresywny, nie współpracuje to wtedy potrzebuje
+            on poświęcenia mu większej ilości czasu oraz użycia większej ilości preparatów ułatwiających rozczesanie. W
+            takim wypadku dopłata do usługi podstawowej wynosi od 20 do 40 zł.</p>
+        <p>W przypadku bardzo mocno skołtunionej i sfilcowanej sierści ustalona wcześniej fryzura może ulec zmianie. Nie
+            rozczesuję na siłę, strzygę pieska tak jak pozwala stan sierści i w takim wypadku również doliczam do usługi
+            podstawowej dopłatę w wysokości od 20 do 40 zł.</p>
+        <p>Zawsze liczy się komfort i dobro pieska!</p>
+    </section>
 </div>

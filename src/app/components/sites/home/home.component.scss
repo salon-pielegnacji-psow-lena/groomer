@@ -22,6 +22,7 @@
 .home-background {
     @extend .size; 
     position: absolute;
+    top:0;
     z-index: -1;
 }
 .home-img {   
@@ -77,13 +78,13 @@
     100% {padding-top: 8vh; }
   }
 .quote {
-    font-size: 13px;
+    font-size: 16px;
     font-style: italic;
-    position: absolute;
-    top: 150px;
+    position: relative;
     text-align: center;
-    width: 80%;
-    left: 10%;
+    width: 98%;
+    left: 2%;
+    top: 190px;
 }
 @media screen and (max-width: $mobile-width) {
     .home-img {       
@@ -103,14 +104,8 @@
     .brand-description {
         font-size: 34px;
     }
-    .quote {
-        top: 115px;
-        font-size: 10px;
-        width: 100%;
-        left: 0;
-    }
-    .copy-position {
-        padding-top: 12vh;    
+    .quote {       
+        top: 155px;
     }
 }
 @media screen and (min-width: $mobile-width-plus-one) and (max-width: $tablet-width) {
@@ -128,9 +123,6 @@
     .brand {
         margin-top: 40px; 
         font-size: 24px;
-    }
-    .quote {
-        top: 160px;
     }
 }
 @media screen and (min-width: $tablet-width-plus-one) and (max-width: $small-pc-width) {
@@ -150,9 +142,6 @@
     .brand {
         margin-top: 40px; 
         font-size: 27px;
-    }
-    .quote {
-        top: 170px;
     }
 }
 @media screen and (min-width: $small-pc-width-plus-one) and (max-width: $pc-width) {
