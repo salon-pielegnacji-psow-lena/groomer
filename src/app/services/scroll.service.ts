@@ -9,6 +9,7 @@ import { Header } from '../helpers/header';
 })
 export class ScrollService {
 
+  prevSection = "";
   private sections!: Section[];
   private currentUrl: string = "";
   public showHeader = false;
@@ -17,8 +18,8 @@ export class ScrollService {
   constructor(private router: Router, public location: Location, private route: ActivatedRoute, private header: Header, @Inject(DOCUMENT) private document: Document) {
     this.router.routeReuseStrategy.shouldReuseRoute = function () { return false; };
   }
- 
-  setScroll(enabled:boolean){
+
+  setScroll(enabled: boolean) {
     this.document.body.style.overflow = enabled ? "" : "hidden";
   }
   setSections(sections: Section[]) {
@@ -35,7 +36,7 @@ export class ScrollService {
 
   goToSection(url: UrlSegment[]) {
     if (url[0]) {
-      this.isScrolling = true;      
+      this.isScrolling = true;
       this.currentUrl = url[0].path;
       this.goToView(this.currentUrl);
     }
@@ -43,13 +44,16 @@ export class ScrollService {
 
   onScroll(e: any) {
     this.isScrolling = true;
-    let currentSection = this.sections.find(a => a.startingPoint >= window.scrollY);   
+    let currentSection = this.sections.find(a => a.startingPoint >= window.scrollY);
     this.currentUrl = currentSection?.name!;
     this.toggleHeader(e);
-    setTimeout(() => {      
-      this.isScrolling = false;
-    }, 500);    
-    this.replaceState(currentSection?.name!);
+    setTimeout(() => {
+      this.isScrolling = false;      
+    }, 500);
+    if (this.prevSection != currentSection?.name!) {
+      this.replaceState(currentSection?.name!);
+      this.prevSection = currentSection?.name!;
+    }    
   }
 
   toggleHeader(e: any) {
@@ -83,13 +87,13 @@ export class ScrollService {
       behavior = { behavior: "auto" }
     targetElement.scrollIntoView(behavior);
     setTimeout(() => {
-      this.replaceState(targetElement.name);   
-    }, 1000);      
+      this.replaceState(targetElement.name);
+    }, 1000);
   }
 
   private replaceState(url: string) {
-    if(url){
+    if (url) {
       this.location.replaceState('#' + url);
-    }    
+    }
   }
 }
