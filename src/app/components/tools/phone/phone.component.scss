@@ -1,0 +1,14 @@
+@import "../../../../scss/colors.scss";
+
+.phone { 
+    text-decoration: none;
+    z-index: 999;
+    color: black;
+}
+a.phone:hover {
+    font-weight: bold;
+}
+.phone .icon {    
+    margin-right: 5px;
+    color: $main-color;
+}

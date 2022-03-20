@@ -10,11 +10,13 @@ import { environment } from 'src/environments/environment';
 export class ContactComponent implements OnInit {
 
   faFacebook = faFacebook;
+
   constructor() { }
 
   ngOnInit(): void {
   }
   goToFacebook(): void {
     window.open(environment.facebook, '_blank');
-  }
+  } 
+
 }

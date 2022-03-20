@@ -3,54 +3,81 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { HeaderComponent } from './components/header/header.component';
-import { MenuComponent } from './components/menu/menu.component';
-import { LayoutComponent } from './components/layout/layout.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomeComponent } from './components/sites/home/home.component';
-import { ContactComponent } from './components/sites/contact/contact.component';
 import { AboutComponent } from './components/sites/about/about.component';
-import { CopyRightsDirective } from './directives/copy-rights.directive';
-import { GoToTopComponent } from './components/go-to-top/go-to-top.component';
-import { LongTextPopupComponent } from './components/long-text-popup/long-text-popup.component';
-import { ButtonComponent } from './components/button/button.component';
+import { ContactComponent } from './components/sites/contact/contact.component';
 import { OfferComponent } from './components/sites/offer/offer.component';
-import { PawsComponent } from './components/paws/paws.component';
+import { RegisterComponent } from './components/sites/register/register.component';
+import { LoginComponent } from './components/sites/login/login.component';
+import { AdminComponent } from './components/sites/admin/admin.component';
+import { LayoutComponent } from './components/layout/layout/layout.component';
+import { MenuComponent } from './components/layout/menu/menu.component';
+import { HeaderComponent } from './components/layout/header/header.component';
+import { FooterComponent } from './components/layout/footer/footer.component';
+import { ButtonComponent } from './components/tools/button/button.component';
+import { ExternalLinkComponent } from './components/tools/external-link/external-link.component';
+import { LogoComponent } from './components/tools/logo/logo.component';
+import { PopupComponent } from './components/tools/popup/popup.component';
+import { GalleryComponent } from './components/tools/gallery/gallery.component';
+import { UserLayoutComponent } from './components/layout/user-layout/user-layout.component';
+import { UserMenuComponent } from './components/layout/user-menu/user-menu.component';
+import { MessageComponent } from './components/tools/message/message.component';
+import { LoaderComponent } from './components/tools/loader/loader.component';
+import { LanguageService } from './services/language.service';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { GoToTopComponent } from './components/tools/go-to-top/go-to-top.component';
+import { RouterComponent } from './components/router/router.component';
 import { MoreComponent } from './components/sites/more/more.component';
-import { FacebookComponent } from './components/facebook/facebook.component';
-import { GalleryComponent } from './components/gallery/gallery.component';
-import { PhoneComponent } from './components/phone/phone.component';
-import { TableComponent } from './components/table/table.component';
+import { BrandComponent } from './components/tools/brand/brand.component';
+import { SetLanguageComponent } from './components/tools/set-language/set-language.component';
+import { PhoneComponent } from './components/tools/phone/phone.component';
+import { TableComponent } from './components/tools/table/table.component';
+import { CopyTextDirective } from './directives/copy-text.directive';
+import { TranslateDirective } from './directives/translate.directive';
+import { PawsComponent } from './components/tools/paws/paws.component';
+import { FacebookComponent } from './components/tools/facebook/facebook.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
-    HeaderComponent,
-    MenuComponent,
-    LayoutComponent,
     HomeComponent,
-    ContactComponent,
     AboutComponent,
-    CopyRightsDirective,
-    GoToTopComponent,
-    LongTextPopupComponent,
-    ButtonComponent,
+    ContactComponent,
     OfferComponent,
-    PawsComponent,
-    MoreComponent,
-    FacebookComponent,
+    RegisterComponent,
+    LoginComponent,
+    AdminComponent,
+    LayoutComponent,
+    MenuComponent,
+    HeaderComponent,
+    FooterComponent,
+    ButtonComponent,
+    ExternalLinkComponent,
+    LogoComponent,
+    PopupComponent,
     GalleryComponent,
+    UserLayoutComponent,
+    UserMenuComponent,
+    MessageComponent,
+    LoaderComponent,
+    GoToTopComponent,
+    RouterComponent,
+    MoreComponent,
+    BrandComponent,
+    SetLanguageComponent,
     PhoneComponent,
-    TableComponent
+    TableComponent,
+    CopyTextDirective,
+    TranslateDirective,
+    PawsComponent,
+    FacebookComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule
   ],
-  providers: [],
+  providers: [LanguageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

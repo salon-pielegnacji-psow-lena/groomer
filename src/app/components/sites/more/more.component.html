@@ -1,183 +1,205 @@
-<div class="more">
-    <h4 class="title">KWALIFIKACJE I WIĘCEJ</h4>
-    <section class="box">
-        <div class="top-left">
-            <div class="top-left-bg"></div>
-            <app-button [isBig]="true" (click)="showQualifications()" class="button-position">Kwalifikacje</app-button>
-            <app-gallery [defaultHidden]="true" [(shown)]="popupShownQualifications" [elements]="qualificationElements">
-            </app-gallery>
-        </div>
-        <div class="top-right">
-            <div class="top-right-bg"></div>
-            <app-button [isBig]="false" (click)="showGallerySalon()" class="button-salon-position">Salon</app-button>
-            <app-gallery [defaultHidden]="true" [(shown)]="popupShownGallerySalon" [elements]="salonElements">
-            </app-gallery>
-            <app-button [isBig]="false" (click)="showGalleryBeforeAfter()" class="button-before-after-position">Przed i
-                po</app-button>
-            <app-gallery [defaultHidden]="true" [(shown)]="popupShownGalleryBeforeAfter"
-                [elements]="beforeAfterElements"></app-gallery>
-        </div>
-        <div class="bottom-left">
-            <div class="bottom-left-bg">
-                <ol>
-                    <li>Salon czynny jest od poniedziałku do piątku od godziny 10:00 do 18:00.</li>
-                    <li>Wizytę umawiam na konkretną godzinę.</li>
-                    <li>W razie rezygnacji z wizyty proszę o wcześniejsze powiado...</li>
-                </ol>
-            </div>
-            <app-button [isBig]="true" (click)="showInformation()" class="button-position">Regulamin</app-button>
-            <app-long-text-popup title="Regulamin" [defaultHidden]="true" [(shown)]="popupShownInformation">
-                <ol>
-                    <li>Pracuję od poniedziałku do piątku od godziny 10:00 do 18:00.</li>
-                    <li>Wizytę umawiam na konkretną godzinę telefonicznie lub na miejscu w salonie, ostatniego pieska
-                        umawiam na g.16:00.</li>
-                    <li>Proszę o punktualność a w razie rezygnacji z wizyty o wcześniejsze powiadomienie mnie
-                        telefoniczne
-                        lub sms-em.</li>
-                    <li>Przyjmuję tylko małe pieski.</li>
-                    <li>Pielęgnacja odbywa się bez podania jakichkolwiek środków uspokajających, oraz bez obecności
-                        właściciela. Piesek jest wtedy spokojniejszy nie dekoncentruje się i zdecydowanie lepiej ze mną
-                        współpracuje.</li>
-                    <li>Każda usługa wykonywana jest z kąpielą przy użyciu odpowiednich dla typu szaty szamponów i
-                        odżywek
-                        renomowanych firm. Wyjątkiem są pieski starsze i chore, wtedy należy go przyprowadzić wykąpanego
-                        i
-                        wyczesanego dzień wcześniej.</li>
-                    <li>Proszę o informowanie mnie o chorobach o podłożu alergicznym, chorobach układu krążenia,
-                        zaziębieniach, padaczce, trudnym charakterze psa oraz innych okolicznościach mogących wpłynąć na
-                        złe
-                        samopoczucie psa w trakcie i po zabiegach pielęgnacyjnych. Nie ponoszę odpowiedzialności za
-                        pogorszenie stanu zdrowia psa w przypadku zatajenia istnienia choroby.</li>
-                    <li>Psy starsze i nadpobudliwe, przyjmuję na żądanie i odpowiedzialność właściciela. Dotyczy to
-                        również
-                        strzyżenia na krótko w okresie mrozów.</li>
-                    <li>Zwalczanie insektów jest konieczne i w razie stwierdzenia wykonuję je bez wcześniejszych ustaleń
-                        na
-                        koszt właściciela.</li>
-                    <li>Dla bezpieczeństwa piesków i mojego stół oraz używane narzędzia są dezynfekowane i
-                        sterylizowane.</li>
-                    <li>Psa wydaję wyłącznie osobie, która dostarczyła pieska do salonu lub przez nią wskazanej.</li>
-                    <li>W przypadku nieszczęśliwego wypadku podczas wykonywania usługi pokrywam koszty leczenia pieska
-                        tylko
-                        na podstawie oświadczenia lub rachunku/paragonu od weterynarza. Nie ponoszę odpowiedzialności
-                        oraz
-                        kosztów leczenia psa nie powstałych w wyniku wykonywanej usługi.</li>
-                    <li>Udzielam porad jak pielęgnować i dbać o pieska w domu, posiadam w sprzedaży odpowiednie szampony
-                        i
-                        odżywki, oraz akcesoria do pielęgnacji psiej szaty takie jak grzebienie, szczotki, trymery itp.
-                    </li>
-                    <li>Każdy pies musi posiadać książeczkę zdrowia z aktualnym szczepieniem przeciwko wściekliźnie.
-                    </li>
-                    <li>Zastrzegam sobie prawo odmowy wykonania usługi w przypadku bardzo agresywnego zachowania psa lub
-                        stwierdzenia chorób skóry.</li>
-                    <li>Przed i po pielęgnacji fotografuję pieska a zdjęcie umieszczam na stronie internetowej salonu
-                        lub na
-                        firmowym profilu fb. Jeżeli właściciel nie wyraża na to zgody, to proszę o poinformowanie mnie o
-                        tym
-                        fakcie.</li>
-                    <li>Umawiając pieska na wizytę i zostawiając go pod moją opieką Właściciel akceptuje wszystkie
-                        punkty
-                        regulaminu.</li>
-                </ol>
-            </app-long-text-popup>
-        </div>
-        <div class="bottom-right">
-            <div class="bottom-right-bg">
-                <ul>
-                    <li>Decydując się na psa bierzemy pełną odpowiedzialność, za jego wychowanie, żywienie, szczepienia
-                        a
-                        także odpowiednią dla rasy pielęgnację.</li>
-                    <li>Co powinniśmy wiedzieć o codziennej pielęgnacji naszych psich przyjaciół?</li>
-                </ul>
-            </div>
-            <app-button [isBig]="true" (click)="showAdvices()" class="button-position">Porady</app-button>
-            <app-long-text-popup title="Porady" [defaultHidden]="true" [(shown)]="popupShownAdvices">
-                <h4>Porady</h4>
-                <p>Decydując się na psa bierzemy pełną odpowiedzialność, za jego wychowanie, żywienie, szczepienia a
-                    także odpowiednią dla rasy pielęgnację.</p>
-                <p>Co powinniśmy wiedzieć o codziennej pielęgnacji naszych psich przyjaciół?</p>
+<div class="site gray-background">
+    <main>
+        <h4>KWALIFIKACJE I WIĘCEJ</h4>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="item qualifications">
+                            <app-button [isBig]="true" (click)="showQualifications()">Kwalifikacje</app-button>
+                            <div class="shadow"></div>
+                        </div>
 
-                <h4>Czesanie</h4>
-                <p>Czesanie i rozczesywanie polega na usuwaniu martwego włosa wraz z podszerstkiem lub bez podszerstka,
-                    na usuwaniu kołtunów, oraz na oczyszczeniu włosów i skóry z kurzu, piasku i brudu poprzez
-                    szczotkowanie. Szczotkować należy od wczesnego wieku szczenięcego. Początkowo po to, by szczeniak
-                    przyzwyczaił się do tej nieuniknionej w przyszłości czynności i nie przeszkadzał nam w trakcie jej
-                    wykonywania. Najlepiej zacząć od czesania szczeniaka miękką szczotką z naturalnego włosia, która nie
-                    podrażni jego skóry, a psu da uczucie przyjemnego masażu.</p>
-                <p>Szata dorosłego psa wymaga regularnej pracy i odpowiednich zabiegów w zależności od jej długości,
-                    struktury sierści, oraz jej podatności na filcowanie. Nie ma jednoznacznej odpowiedzi na pytanie jak
-                    często czesać psa.</p>
-                <p>Przed przystąpieniem do czesania sierść powinna być spryskana preparatem do rozczesywania, lub
-                    odżywką rozcieńczoną w przegotowanej wodzie. Do wstępnego czesania psa używamy metalowej szczotki,
-                    następnie bierzemy do ręki grzebień i porządnie rozczesujemy pasmo, za pasmem dotykając ząbkami
-                    grzebienia skóry.</p>
+                    </td>
+                    <td>
+                        <div class="item salon">
+                            <app-button [isBig]="false" (click)="showGallerySalon()">Salon</app-button>
+                            <app-button [isBig]="false" (click)="showGalleryBeforeAfter()">Przed i po</app-button>
+                            <div class="shadow"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <app-button [isBig]="true" (click)="showInformation()">Regulamin
+                            </app-button>
+                            <div class="shadow ">
+                                <div class="information">
+                                    <b>Regulamin</b>
+                                    <p>Pracuję od poniedziałku do piątku od godziny 10:00 do 18:00.</p>
+                                    <p>Wizytę umawiam na konkretną godzinę telefonicznie lub na miejscu w salonie,
+                                        ostatniego pieska
+                                        umawiam na g.16:00.</p>
+                                </div>
+                            </div>
+                        </div>
 
-                <h4>Trymowanie</h4>
-                <p>Trymowanie polega na usuwaniu martwego włosa i podszerstka przez wyskubywanie. Służą do tego
-                    specjalne trymery, kamienie trymerskie, oraz własne palce i specjalne gumowe „naparstki”. Trymowanie
-                    jest połączone z odpowiednim modelowaniem sylwetki psa, dlatego tak ważna jest znajomość wzorca.
-                    Dobrze wykonywane trymowanie nie jest bolesne dla psa, czego bardzo często boją się właściciele.
-                    Trymowany pies nie gubi włosa a co za tym idzie nie mamy problemu z sierścią w domu. Włos odrasta
-                    twardszy o odpowiedniej strukturze oraz bardziej wyrazistej barwie. Jeden zabieg trymowania u psa z
-                    sierścią w normalnym stanie wystarcza na ok. 2-3 miesiące. Potem należy go powtórzyć. Jeśli szata
-                    jest w złym stanie - częstotliwość kolejnych zabiegów będzie zależała od potrzeb. Włos nie trymowany
-                    albo wypada sam, albo pozostaje w skórze utrudniając wzrost nowego, zdrowego włosa.</p>
-                <p>Psy krótkowłose są częstymi gośćmi salonu, ich liniejąca sierść bywa bardzo uciążliwa dla
-                    właścicieli. Mam na to rade - psy krótkowłose trzeba trymować! Po takim zabiegu szata psa staje się
-                    gładka i lśniąca, a wyskubany martwy włos nie sprawia już kłopotu właścicielom czworonoga.</p>
-
-                <h4>Strzyżenie</h4>
-                <p>Strzyżenie to skracanie włosa z jednoczesnym modelowaniem psa uwzględniając przy tym wzorzec rasy,
-                    anatomię, porę roku oraz oczekiwania właściciela.</p>
-                <p>Strzyżenie powinno być również praktyczne dla właściciela psiaka, tak by po czterech, pięciu a nawet
-                    ośmiu tygodniach czesanie i codzienna pielęgnacja nie sprawiały mu kłopotu.</p>
-
-                <h4>Co robić gdy pies linieje?</h4>
-                <p>Kłęby sierści na podłodze, sierść lepiąca się do ubrań, wkradająca się do każdego zakamarka
-                    mieszkania; na talerzu z obiadem, do kanapek; do pluszowych maskotek naszych dzieci po prostu
-                    wszędzie. Właściciele liniejących psów znają ten problem bardzo dobrze.</p>
-                <p>A czym jest linienie? Linienie jest to naturalny proces polegający na zrzucaniu martwych włosów oraz
-                    wymianie sierści. Poza nielicznymi rasami, które nie linieją wszystkie psy zrzucają włosy i trzeba
-                    być na to przygotowanym decydując się na psa. Intensywne linienie dotyczy psów, których szata składa
-                    się z dwóch warstw: miękkiego i puszystego podszerstka oraz włosów okrywowych, które są dłuższe
-                    (długość zależna jest od rasy) i twardsze. Podszerstek ma za zadanie chronić zwierzę przed niskimi
-                    temperaturami, dlatego na zimę to głównie ta warstwa staje się grubsza i gęstsza. Latem zarówno
-                    podszerstek, jak i włos okrywowy stają się słabsze.</p>
-                <p>U większości zwierząt linienie występuje cyklicznie co sześć miesięcy - wiosną i jesienią, jest to
-                    związane ze zmianą długości dnia i ilości światła słonecznego. Nasze pieski przebywają z nami w
-                    mieszkaniu, które jest ogrzewane i sztucznie oświetlane, przez co okresy linienia mogą trwać nawet
-                    cały rok. Konieczne jest wtedy regularne i częste czesanie go i szczotkowanie w celu usunięcia
-                    zbierającego się w dużych ilościach martwego włosa. Zabiegi szczotkowania i rozczesywania sierści
-                    działają na skórę jak masaż, a co za tym idzie poprawia się jej ukrwienie i stymuluje wzrost nowych
-                    włosów.</p>
-                <p>Martwy włos ma tendencję do filcowania się i tworzy „skorupę” na skórze, która nie przepuszcza
-                    powietrza i może doprowadzić do poważnych problemów skórnych. Dlatego też tak ważne jest
-                    systematyczne wyczesywanie.</p>
-                <p>W salonie mam specjalne zgrzebła ułatwiające wyczesywanie martwego podszerstka i włosa takie jak
-                    COAT-KING czy FURMINATOR. Porządne wyczesanie jak i kąpiel na długo uwolnią nas od kłębów sierści w
-                    mieszkaniu.</p>
-                <p>Jeżeli do tego jest odpowiednia dieta czyli karma dobrej jakości + dodatkowo w okresie intensywnego
-                    linienia preparaty wzmacniające sierść, NNKT omega3 i omega6 to efekt powinien być odczuwalny.</p>
-
-                <h4>Kąpiel</h4>
-                <p>Kąpiel ma na celu usunięcie zabrudzeń z sierści i skóry psa. Przed przystąpieniem do kąpieli powinno
-                    się dokładnie rozczesać i wyczesać psa i dopiero wtedy możemy rozpocząć mycie. Podczas kąpieli jak i
-                    suszenia pies pozbywa się również znacznej ilości martwego włosa, który jeszcze mocno był osadzony i
-                    nie wyszedł w czasie czesania.</p>
-                <p>W salonie kąpiel przeprowadzam w trzech etapach.</p>
-                <p><span class="italic">Pierwszy etap</span> - pierwsze mycie - używam szamponu głęboko myjącego i
-                    oczyszczającego skórę i włos.</p>
-                <p><span class="italic">Drugi etap</span> - drugie mycie - dobieram odpowiedni szampon dostosowany do
-                    gatunku włosa, jego stanu zdrowotnego, wieku pieska jak również koloru.</p>
-                <p><span class="italic">Trzeci etap</span> - nakładanie odżywki - dobieram odpowiednią odżywkę, jeżeli
-                    chcę włos odżywić wybieram odbudowującą, wzmacniającą; do długich włosów odżywczą i jednocześnie
-                    ułatwiającą rozczesywanie; do szorstkich taką by włos pozostał twardy i szorstki. Odżywkę nakładam
-                    po drugim myciu delikatnie wcieram - masując całego psa i pozostawiam na ok. 5 min, po czym obficie
-                    spłukuję wodą. Do kąpieli używam profesjonalne, doskonałej jakości kosmetyki, przeznaczone dla psów.
-                </p>
-                <p>Po kąpieli każdy piesek jest suszony suszarką z jednoczesnym modelowaniem włosa szczotką. Dlatego od
-                    małego szczeniaka należy przyzwyczajać do suszarki, by nie było to dla niego zbyt stresujące.</p>
-            </app-long-text-popup>
-        </div>
-    </section>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <app-button [isBig]="true" (click)="showAdvices()">Porady
+                            </app-button>
+                            <div class="shadow">
+                                <div class="advices">
+                                    <b>Porady</b>
+                                    <p>Decydując się na psa bierzemy pełną odpowiedzialność, za jego wychowanie,
+                                        żywienie,
+                                        szczepienia a
+                                        także odpowiednią dla rasy pielęgnację.</p>
+                                    <p>Co powinniśmy wiedzieć o codziennej pielęgnacji naszych psich przyjaciół?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
 </div>
+<app-gallery [defaultHidden]="true" [(shown)]="popupShownQualifications" [elements]="qualificationElements">
+</app-gallery>
+<app-gallery [defaultHidden]="true" [(shown)]="popupShownGallerySalon" [elements]="salonElements"></app-gallery>
+<app-gallery [defaultHidden]="true" [(shown)]="popupShownGalleryBeforeAfter" [elements]="beforeAfterElements">
+</app-gallery>
+<app-popup class="text-left" title="Regulamin" [defaultHidden]="true" [(shown)]="popupShownInformation">
+    <ol>
+        <li>Pracuję od poniedziałku do piątku od godziny 10:00 do 18:00.</li>
+        <li>Wizytę umawiam na konkretną godzinę telefonicznie lub na miejscu w salonie, ostatniego pieska
+            umawiam na g.16:00.</li>
+        <li>Proszę o punktualność a w razie rezygnacji z wizyty o wcześniejsze powiadomienie mnie
+            telefoniczne
+            lub sms-em.</li>
+        <li>Przyjmuję tylko małe pieski.</li>
+        <li>Pielęgnacja odbywa się bez podania jakichkolwiek środków uspokajających, oraz bez obecności
+            właściciela. Piesek jest wtedy spokojniejszy nie dekoncentruje się i zdecydowanie lepiej ze mną
+            współpracuje.</li>
+        <li>Każda usługa wykonywana jest z kąpielą przy użyciu odpowiednich dla typu szaty szamponów i
+            odżywek
+            renomowanych firm. Wyjątkiem są pieski starsze i chore, wtedy należy go przyprowadzić wykąpanego
+            i
+            wyczesanego dzień wcześniej.</li>
+        <li>Proszę o informowanie mnie o chorobach o podłożu alergicznym, chorobach układu krążenia,
+            zaziębieniach, padaczce, trudnym charakterze psa oraz innych okolicznościach mogących wpłynąć na
+            złe
+            samopoczucie psa w trakcie i po zabiegach pielęgnacyjnych. Nie ponoszę odpowiedzialności za
+            pogorszenie stanu zdrowia psa w przypadku zatajenia istnienia choroby.</li>
+        <li>Psy starsze i nadpobudliwe, przyjmuję na żądanie i odpowiedzialność właściciela. Dotyczy to
+            również
+            strzyżenia na krótko w okresie mrozów.</li>
+        <li>Zwalczanie insektów jest konieczne i w razie stwierdzenia wykonuję je bez wcześniejszych ustaleń
+            na
+            koszt właściciela.</li>
+        <li>Dla bezpieczeństwa piesków i mojego stół oraz używane narzędzia są dezynfekowane i
+            sterylizowane.</li>
+        <li>Psa wydaję wyłącznie osobie, która dostarczyła pieska do salonu lub przez nią wskazanej.</li>
+        <li>W przypadku nieszczęśliwego wypadku podczas wykonywania usługi pokrywam koszty leczenia pieska
+            tylko
+            na podstawie oświadczenia lub rachunku/paragonu od weterynarza. Nie ponoszę odpowiedzialności
+            oraz
+            kosztów leczenia psa nie powstałych w wyniku wykonywanej usługi.</li>
+        <li>Udzielam porad jak pielęgnować i dbać o pieska w domu, posiadam w sprzedaży odpowiednie szampony
+            i
+            odżywki, oraz akcesoria do pielęgnacji psiej szaty takie jak grzebienie, szczotki, trymery itp.
+        </li>
+        <li>Każdy pies musi posiadać książeczkę zdrowia z aktualnym szczepieniem przeciwko wściekliźnie.
+        </li>
+        <li>Zastrzegam sobie prawo odmowy wykonania usługi w przypadku bardzo agresywnego zachowania psa lub
+            stwierdzenia chorób skóry.</li>
+        <li>Przed i po pielęgnacji fotografuję pieska a zdjęcie umieszczam na stronie internetowej salonu
+            lub na
+            firmowym profilu fb. Jeżeli właściciel nie wyraża na to zgody, to proszę o poinformowanie mnie o
+            tym
+            fakcie.</li>
+        <li>Umawiając pieska na wizytę i zostawiając go pod moją opieką Właściciel akceptuje wszystkie
+            punkty
+            regulaminu.</li>
+    </ol>
+</app-popup>
+<app-popup class="text-left" title="Porady" [defaultHidden]="true" [(shown)]="popupShownAdvices">
+    <h4>Porady</h4>
+    <p>Decydując się na psa bierzemy pełną odpowiedzialność, za jego wychowanie, żywienie, szczepienia a
+        także odpowiednią dla rasy pielęgnację.</p>
+    <p>Co powinniśmy wiedzieć o codziennej pielęgnacji naszych psich przyjaciół?</p>
+
+    <h4>Czesanie</h4>
+    <p>Czesanie i rozczesywanie polega na usuwaniu martwego włosa wraz z podszerstkiem lub bez podszerstka,
+        na usuwaniu kołtunów, oraz na oczyszczeniu włosów i skóry z kurzu, piasku i brudu poprzez
+        szczotkowanie. Szczotkować należy od wczesnego wieku szczenięcego. Początkowo po to, by szczeniak
+        przyzwyczaił się do tej nieuniknionej w przyszłości czynności i nie przeszkadzał nam w trakcie jej
+        wykonywania. Najlepiej zacząć od czesania szczeniaka miękką szczotką z naturalnego włosia, która nie
+        podrażni jego skóry, a psu da uczucie przyjemnego masażu.</p>
+    <p>Szata dorosłego psa wymaga regularnej pracy i odpowiednich zabiegów w zależności od jej długości,
+        struktury sierści, oraz jej podatności na filcowanie. Nie ma jednoznacznej odpowiedzi na pytanie jak
+        często czesać psa.</p>
+    <p>Przed przystąpieniem do czesania sierść powinna być spryskana preparatem do rozczesywania, lub
+        odżywką rozcieńczoną w przegotowanej wodzie. Do wstępnego czesania psa używamy metalowej szczotki,
+        następnie bierzemy do ręki grzebień i porządnie rozczesujemy pasmo, za pasmem dotykając ząbkami
+        grzebienia skóry.</p>
+
+    <h4>Trymowanie</h4>
+    <p>Trymowanie polega na usuwaniu martwego włosa i podszerstka przez wyskubywanie. Służą do tego
+        specjalne trymery, kamienie trymerskie, oraz własne palce i specjalne gumowe „naparstki”. Trymowanie
+        jest połączone z odpowiednim modelowaniem sylwetki psa, dlatego tak ważna jest znajomość wzorca.
+        Dobrze wykonywane trymowanie nie jest bolesne dla psa, czego bardzo często boją się właściciele.
+        Trymowany pies nie gubi włosa a co za tym idzie nie mamy problemu z sierścią w domu. Włos odrasta
+        twardszy o odpowiedniej strukturze oraz bardziej wyrazistej barwie. Jeden zabieg trymowania u psa z
+        sierścią w normalnym stanie wystarcza na ok. 2-3 miesiące. Potem należy go powtórzyć. Jeśli szata
+        jest w złym stanie - częstotliwość kolejnych zabiegów będzie zależała od potrzeb. Włos nie trymowany
+        albo wypada sam, albo pozostaje w skórze utrudniając wzrost nowego, zdrowego włosa.</p>
+    <p>Psy krótkowłose są częstymi gośćmi salonu, ich liniejąca sierść bywa bardzo uciążliwa dla
+        właścicieli. Mam na to rade - psy krótkowłose trzeba trymować! Po takim zabiegu szata psa staje się
+        gładka i lśniąca, a wyskubany martwy włos nie sprawia już kłopotu właścicielom czworonoga.</p>
+
+    <h4>Strzyżenie</h4>
+    <p>Strzyżenie to skracanie włosa z jednoczesnym modelowaniem psa uwzględniając przy tym wzorzec rasy,
+        anatomię, porę roku oraz oczekiwania właściciela.</p>
+    <p>Strzyżenie powinno być również praktyczne dla właściciela psiaka, tak by po czterech, pięciu a nawet
+        ośmiu tygodniach czesanie i codzienna pielęgnacja nie sprawiały mu kłopotu.</p>
+
+    <h4>Co robić gdy pies linieje?</h4>
+    <p>Kłęby sierści na podłodze, sierść lepiąca się do ubrań, wkradająca się do każdego zakamarka
+        mieszkania; na talerzu z obiadem, do kanapek; do pluszowych maskotek naszych dzieci po prostu
+        wszędzie. Właściciele liniejących psów znają ten problem bardzo dobrze.</p>
+    <p>A czym jest linienie? Linienie jest to naturalny proces polegający na zrzucaniu martwych włosów oraz
+        wymianie sierści. Poza nielicznymi rasami, które nie linieją wszystkie psy zrzucają włosy i trzeba
+        być na to przygotowanym decydując się na psa. Intensywne linienie dotyczy psów, których szata składa
+        się z dwóch warstw: miękkiego i puszystego podszerstka oraz włosów okrywowych, które są dłuższe
+        (długość zależna jest od rasy) i twardsze. Podszerstek ma za zadanie chronić zwierzę przed niskimi
+        temperaturami, dlatego na zimę to głównie ta warstwa staje się grubsza i gęstsza. Latem zarówno
+        podszerstek, jak i włos okrywowy stają się słabsze.</p>
+    <p>U większości zwierząt linienie występuje cyklicznie co sześć miesięcy - wiosną i jesienią, jest to
+        związane ze zmianą długości dnia i ilości światła słonecznego. Nasze pieski przebywają z nami w
+        mieszkaniu, które jest ogrzewane i sztucznie oświetlane, przez co okresy linienia mogą trwać nawet
+        cały rok. Konieczne jest wtedy regularne i częste czesanie go i szczotkowanie w celu usunięcia
+        zbierającego się w dużych ilościach martwego włosa. Zabiegi szczotkowania i rozczesywania sierści
+        działają na skórę jak masaż, a co za tym idzie poprawia się jej ukrwienie i stymuluje wzrost nowych
+        włosów.</p>
+    <p>Martwy włos ma tendencję do filcowania się i tworzy „skorupę” na skórze, która nie przepuszcza
+        powietrza i może doprowadzić do poważnych problemów skórnych. Dlatego też tak ważne jest
+        systematyczne wyczesywanie.</p>
+    <p>W salonie mam specjalne zgrzebła ułatwiające wyczesywanie martwego podszerstka i włosa takie jak
+        COAT-KING czy FURMINATOR. Porządne wyczesanie jak i kąpiel na długo uwolnią nas od kłębów sierści w
+        mieszkaniu.</p>
+    <p>Jeżeli do tego jest odpowiednia dieta czyli karma dobrej jakości + dodatkowo w okresie intensywnego
+        linienia preparaty wzmacniające sierść, NNKT omega3 i omega6 to efekt powinien być odczuwalny.</p>
+
+    <h4>Kąpiel</h4>
+    <p>Kąpiel ma na celu usunięcie zabrudzeń z sierści i skóry psa. Przed przystąpieniem do kąpieli powinno
+        się dokładnie rozczesać i wyczesać psa i dopiero wtedy możemy rozpocząć mycie. Podczas kąpieli jak i
+        suszenia pies pozbywa się również znacznej ilości martwego włosa, który jeszcze mocno był osadzony i
+        nie wyszedł w czasie czesania.</p>
+    <p>W salonie kąpiel przeprowadzam w trzech etapach.</p>
+    <p><span class="italic">Pierwszy etap</span> - pierwsze mycie - używam szamponu głęboko myjącego i
+        oczyszczającego skórę i włos.</p>
+    <p><span class="italic">Drugi etap</span> - drugie mycie - dobieram odpowiedni szampon dostosowany do
+        gatunku włosa, jego stanu zdrowotnego, wieku pieska jak również koloru.</p>
+    <p><span class="italic">Trzeci etap</span> - nakładanie odżywki - dobieram odpowiednią odżywkę, jeżeli
+        chcę włos odżywić wybieram odbudowującą, wzmacniającą; do długich włosów odżywczą i jednocześnie
+        ułatwiającą rozczesywanie; do szorstkich taką by włos pozostał twardy i szorstki. Odżywkę nakładam
+        po drugim myciu delikatnie wcieram - masując całego psa i pozostawiam na ok. 5 min, po czym obficie
+        spłukuję wodą. Do kąpieli używam profesjonalne, doskonałej jakości kosmetyki, przeznaczone dla psów.
+    </p>
+    <p>Po kąpieli każdy piesek jest suszony suszarką z jednoczesnym modelowaniem włosa szczotką. Dlatego od
+        małego szczeniaka należy przyzwyczajać do suszarki, by nie było to dla niego zbyt stresujące.</p>
+</app-popup>

@@ -1,0 +1,25 @@
+{
+    "translations": [
+        { "k": "main-name", "v": "Krzysztof Sauermann" }
+        ,{
+            "k": "start",
+            "v": "Start"
+        },
+        {
+            "k": "omnie",
+            "v": "O mnie"
+        },        
+        {
+            "k": "oferta",
+            "v": "Oferta"
+        },
+        {
+            "k": "wiecej",
+            "v": "Więcej"
+        },
+        {
+            "k": "kontakt",
+            "v": "Kontakt"
+        }
+    ]
+}

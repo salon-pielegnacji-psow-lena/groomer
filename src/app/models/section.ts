@@ -1,18 +1,16 @@
-import { ElementRef } from "@angular/core";
-
 export class Section {
-    public name: string;
-    public oldUrl: string | null;
-    public element: ElementRef;
-    public startingPoint: number;
-    public link: any;
-    public description: string;
-    constructor(name: string, description: string, elementRef: ElementRef, oldUrl: string | null) {
-        this.name = name;
-        this.oldUrl = oldUrl;
-        this.element = elementRef;
-        this.startingPoint = elementRef.nativeElement.offsetTop + elementRef.nativeElement.offsetHeight - 3;
-        this.link = `/${name}`;
-        this.description = description;
+    private first: string;
+    private second: string;
+    constructor(first: string, second: string) {
+        this.first = first;
+        this.second = second;
+    }
+    getFirstStartingPoint() {
+        let element = document.getElementById(this.first);        
+        return element?.offsetTop ?? 0 + (element?.offsetHeight ?? 0);
+    }
+    getSecondStartingPoint() {
+        let element = document.getElementById(this.second);
+        return element?.offsetTop ?? 0 + (element?.offsetHeight ?? 0);
     }
 }

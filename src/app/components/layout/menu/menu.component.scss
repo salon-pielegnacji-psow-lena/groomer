@@ -1,0 +1,138 @@
+@import "../../../../scss/colors.scss";
+@import "../../../../scss/sizes.scss";
+
+.HEADER-menu {
+    display: table;
+    margin: 0 auto;
+    margin-top: 23px;
+    font-size: 14px;    
+}
+.HEADER-menu > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+    list-style: none;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.HEADER-menu li {
+    padding: 7px 12px 0px;    
+    cursor: pointer;
+}
+.HEADER-menu > ul > li:hover {
+    color: $main-color;
+}
+.HEADER-menu > ul .active-link { 
+    border-bottom: 2px solid $main-color;    
+}
+.HEADER-menu .icon {
+    display: table;
+    margin: 0 auto;
+}
+
+.HOME-menu {
+    position: absolute;
+    list-style-type: none;    
+    text-align: left;  
+    padding-inline-start: 0;
+    z-index: 999;
+    left: 10%;
+    top: 150px;
+}
+.HOME-menu > ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;    
+    list-style: none;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.HOME-menu li {
+    padding: 12px;    
+    cursor: pointer;
+    display: flex;
+    text-align: left;   
+}
+.HOME-menu > ul > li:hover {
+    color: $name-color;
+}
+.HOME-menu > ul .active-link { 
+    border-left: 3px solid $name-color;
+    pointer-events: none;    
+}
+.HOME-menu .icon {
+    display: table;
+    margin: 5px;
+    min-width: 20px;
+    text-align: center;
+}
+.HOME-menu .description {
+    display: table;
+    margin: 5px;
+}
+
+@media screen and (max-width: $tablet-width) {
+    .HEADER-menu {
+        margin-top: 4px;        
+    }
+    .HEADER-menu li {
+        padding: 7.5px 10px;
+    }
+    .HOME-menu {
+        left: 0;
+        top: 70px;
+    }
+    .HOME-menu li {
+        min-width: 20px;
+        padding: 2px;
+    }
+    .HOME-menu .description,
+    .description {
+        display: none;
+    } 
+}
+
+@media screen and (max-height: $mobile-landscape-min-height) and (min-width: $tablet-width) {
+    .HEADER-menu {
+        margin-top: 4px;
+    }
+    .HEADER-menu li {
+        padding: 7.5px 15px;
+    } 
+
+    .HOME-menu {
+        left: 20px;
+        top: 120px;
+    }
+    .HOME-menu > ul {
+        margin-top: 10px;
+        margin-left: 10%;
+        display: flex;   
+        flex-direction: column;
+        justify-content: center;       
+    }
+    .HOME-menu li {
+        min-width: 20px;
+        padding: 7px 10px;
+    }
+    // .HOME-menu .description {
+    //     font-size: 14px;
+    // }  
+    // .HOME-menu .icon {
+    //    display: none;
+    // }     
+    // .HOME-menu > ul .active-link { 
+    //     font-weight: bold;
+    //     pointer-events: none;    
+    // }
+    // .description {
+    //     display: none;
+    // } 
+    .HOME-menu .description,
+    .description {
+        display: none;
+    }     
+}

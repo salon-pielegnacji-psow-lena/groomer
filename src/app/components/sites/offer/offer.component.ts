@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TableRow } from 'src/app/models/table-row';
-import { ScrollService } from 'src/app/services/scroll.service';
+import { LanguageService } from 'src/app/services/language.service';
+import { RoutingService } from 'src/app/services/routing.service';
 
 @Component({
   selector: 'app-offer',
@@ -12,8 +13,8 @@ export class OfferComponent implements OnInit {
   cutting: TableRow[] = [];
   modeling: TableRow[] = [];
   other: TableRow[] = [];
-  
-  constructor(public scrollService: ScrollService) { }
+
+  constructor(public language: LanguageService, private routingService: RoutingService) { }
 
   ngOnInit(): void {
     this.cutting.push(new TableRow(1, ['York mini', 'od 100 zł']));
@@ -36,6 +37,9 @@ export class OfferComponent implements OnInit {
     this.other.push(new TableRow(1, ['KĄPIEL', 'od 70 zł']));
     this.other.push(new TableRow(1, ['KĄPIEL pieski mini', 'od 60 zł']));
     this.other.push(new TableRow(1, ['Rozczesanie skołtunionej sierści', '70 zł/godz.']));
+  }
+  goToContact(){
+    this.routingService.redirect('contact');
   }
 
 }

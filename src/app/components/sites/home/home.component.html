@@ -1,17 +1,23 @@
-<div class="home">
-    <div class="home-background"></div>
-    <div class="logo"></div> 
-    <app-menu *ngIf="!header.isShown()"></app-menu>
-    <app-facebook [fontSize]="40"></app-facebook>
-    <div class="brand">
-        <span class="brand-description">Lena</span>
-        <div>Salon Pielęgnacji Psów</div>
-        <div class="name">Beata Zdrowak<span class="phone"><app-phone></app-phone></span></div>       
+<div class="home-background"></div>
+<app-logo type="HOME"></app-logo>
+<div class="brand">
+    <span class="brand-description">Lena</span>
+    <div>Salon Pielęgnacji Psów</div>
+    <div class="name">Beata Zdrowak
+        <span class="phone">
+            <app-phone [href]="'tel:+48517803638'">517 803 638</app-phone>
+        </span>
     </div>
-    <p class="quote">"Pies jest jedynym stworzeniem na ziemi, które kocha Cię więcej niż siebie samego" Josh Billings</p> 
-    <div class="home-img"></div>    
 </div>
-<div class="blank">
-    <div class="arrow"><fa-icon [icon]="faAngleDoubleDown" ></fa-icon></div>
-    <!-- <p class="quote">"Pies jest jedynym stworzeniem na ziemi, które kocha Cię więcej niż siebie samego" Josh Billings</p> -->
+<app-menu type="HOME"></app-menu>
+<app-facebook [fontSize]="40" [top]="0"></app-facebook>
+<div class="site">
+    <main>
+        <p class="quote">"Pies jest jedynym stworzeniem na ziemi, które kocha Cię więcej niż siebie samego" Josh
+            Billings</p>
+        <div class="home-img"></div>
+    </main>
+    <div class="arrow">
+        <fa-icon [icon]="faAngleDoubleDown"></fa-icon>
+    </div>
 </div>

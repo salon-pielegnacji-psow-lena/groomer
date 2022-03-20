@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ScrollService } from 'src/app/services/scroll.service';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
   selector: 'app-about',
@@ -8,13 +8,12 @@ import { ScrollService } from 'src/app/services/scroll.service';
 })
 export class AboutComponent implements OnInit {
 
-  popupShown = false;
-  constructor(public scrollService: ScrollService) { }
+  dotnetYears: number = new Date().getFullYear() - new Date(2014,7,1).getFullYear();
+  trainerYears: number = new Date().getFullYear() - new Date(2018,9,1).getFullYear();
+
+  constructor(public language:LanguageService) { }
 
   ngOnInit(): void {
   }
 
-  showPopup() {
-    this.popupShown = true;
-  }
 }

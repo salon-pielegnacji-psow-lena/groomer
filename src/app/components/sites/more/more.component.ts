@@ -25,7 +25,6 @@ export class MoreComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
   showInformation() {
     this.popupShownInformation = true;
   }

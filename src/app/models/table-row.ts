@@ -5,4 +5,5 @@ export class TableRow {
         this.colspan = colspan;
         this.data = data;
     }
+
 }

@@ -1,5 +1,0 @@
-<ul *ngIf="render" [ngClass]="classes">
-    <li *ngFor="let section of scrollService.getSections()" (click)="scrollService.goToView(section.name)"  class="link noselect" title="{{section.description}}">
-        <div [id]="'menu-' + section.name" class="description noselect" [ngClass]="{'active-link': scrollService.isActive(section.name)}">{{section.description}}</div>
-    </li>
-</ul>

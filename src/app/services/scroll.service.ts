@@ -1,59 +1,65 @@
 import { Injectable, Inject } from '@angular/core';
-import { Router, ActivatedRoute, UrlSegment } from '@angular/router';
-import { Section } from '../models/section';
+import { Router } from '@angular/router';
 import { DOCUMENT, Location } from '@angular/common';
-import { Header } from '../helpers/header';
+import { HeaderService } from './header.service';
+import { RoutingService } from './routing.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ScrollService {
+  public showHeader = false;
 
   prevSection = "";
-  private sections!: Section[];
-  private currentUrl: string = "";
-  public showHeader = false;
-  public isScrolling = false;
+  currentSection: any = RoutingService.routes[0];
   currentPosition: number = 0;
-  constructor(private router: Router, public location: Location, private route: ActivatedRoute, private header: Header, @Inject(DOCUMENT) private document: Document) {
+
+  constructor(private router: Router, public location: Location, private header: HeaderService, @Inject(DOCUMENT) private document: Document) {
     this.router.routeReuseStrategy.shouldReuseRoute = function () { return false; };
   }
 
   setScroll(enabled: boolean) {
     this.document.body.style.overflow = enabled ? "" : "hidden";
   }
-  setSections(sections: Section[]) {
-    this.sections = sections;
-  }
 
-  getSections() {
-    return this.sections;
-  }
+  onScroll(e: any) {
+    this.toggleHeader(e);
+    this.currentSection = RoutingService.routes.find(a => window.scrollY + 1 >= a.section.getFirstStartingPoint() && window.scrollY + 1 < a.section.getSecondStartingPoint()); 
+    
+    // console.log(RoutingService.routes[0].path)
+    // console.log(RoutingService.routes[0].section.getFirstStartingPoint())
+    // console.log(RoutingService.routes[0].section.getSecondStartingPoint())
 
-  isActive(fragment: string) {
-    return this.currentUrl != "" ? this.currentUrl == fragment : "start" == fragment;
-  }
+    // console.log(RoutingService.routes[1].path)
+    // console.log(RoutingService.routes[1].section.getFirstStartingPoint())
+    // console.log(RoutingService.routes[1].section.getSecondStartingPoint())
 
-  goToSection(url: UrlSegment[]) {
-    if (url[0]) {
-      this.isScrolling = true;
-      this.currentUrl = url[0].path;
-      this.goToView(this.currentUrl);
+    // console.log(RoutingService.routes[2].path)
+    // console.log(RoutingService.routes[2].section.getFirstStartingPoint())
+    // console.log(RoutingService.routes[2].section.getSecondStartingPoint())
+
+    // console.log(RoutingService.routes[3].path)
+    // console.log(RoutingService.routes[3].section.getFirstStartingPoint())
+    // console.log(RoutingService.routes[3].section.getSecondStartingPoint())
+
+    // console.log(RoutingService.routes[4].path)
+    // console.log(RoutingService.routes[4].section.getFirstStartingPoint())
+    // console.log(RoutingService.routes[4].section.getSecondStartingPoint())
+
+    // console.log(RoutingService.routes[5].path)
+    // console.log(RoutingService.routes[5].section.getFirstStartingPoint())
+    // console.log(RoutingService.routes[5].section.getSecondStartingPoint())
+    // console.log(this.currentSection);
+    // console.log(window.scrollY);
+
+    if (this.prevSection != this.currentSection?.path!) {
+      this.replaceState(this.currentSection?.path!);
+      this.prevSection = this.currentSection?.path!;
     }
   }
 
-  onScroll(e: any) {
-    this.isScrolling = true;
-    let currentSection = this.sections.find(a => a.startingPoint >= window.scrollY);
-    this.currentUrl = currentSection?.name!;
-    this.toggleHeader(e);
-    setTimeout(() => {
-      this.isScrolling = false;      
-    }, 500);
-    if (this.prevSection != currentSection?.name!) {
-      this.replaceState(currentSection?.name!);
-      this.prevSection = currentSection?.name!;
-    }    
+  isActive(fragment: string) {
+    return this.currentSection?.path! != "" ? this.currentSection?.path! == fragment : "start" == fragment;
   }
 
   toggleHeader(e: any) {
@@ -80,15 +86,13 @@ export class ScrollService {
     this.currentPosition = scroll;
   }
 
-  goToView(url: string | null, smooth: boolean = true) {
-    let targetElement = this.sections.find(a => a.name == url || a.oldUrl == url)?.element.nativeElement ?? this.sections[0].element.nativeElement;
-    let behavior = { behavior: "smooth" }
-    if (!smooth)
-      behavior = { behavior: "auto" }
-    targetElement.scrollIntoView(behavior);
-    setTimeout(() => {
-      this.replaceState(targetElement.name);
-    }, 1000);
+  scrollToView(url: string, isSmooth: boolean) {
+    var behavior: any = { behavior: 'auto' }
+    if (isSmooth) {
+      behavior = { behavior: 'smooth' };
+    } 
+    this.document.getElementById(url)?.scrollIntoView(behavior);
+  
   }
 
   private replaceState(url: string) {

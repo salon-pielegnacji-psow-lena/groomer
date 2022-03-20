@@ -1,0 +1,45 @@
+
+.block-ui {
+    z-index: 1000;
+    background-color: #d1d1d1;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top:0;
+    z-index: 1001;
+    opacity: 0.9;
+  }
+  .loader-container {
+    min-width: 76px;
+    height: 120px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    margin: -35px 0 0 -35px;
+    z-index: 1000;
+  }
+  .loader {
+    width: 76px;
+    height: 76px;
+    background-image: url("../../../../assets/images/logo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: loader-scale 0.7s infinite;
+    animation-delay: 0.3s;
+  }
+  .message{
+    text-align: center;
+  }
+    @keyframes loader-scale {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(0.8);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    

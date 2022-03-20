@@ -1,18 +1,11 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { LayoutComponent } from './components/layout/layout.component';
+import { RouterModule } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
+import { RoutingService } from './services/routing.service';
 
-const routes: Routes = [ 
-  { path: "start", component: LayoutComponent, pathMatch: 'full' },
-  { path: "omnie", component: LayoutComponent, pathMatch: 'full' },
-  { path: "kontakt", component: LayoutComponent, pathMatch: 'full' },
-  { path: "wiecej", component: LayoutComponent, pathMatch: 'full' },
-  { path: "oferta", component: LayoutComponent, pathMatch: 'full' },
-  { path: "", component: LayoutComponent },
-  { path: "**", component: LayoutComponent },
-];
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {anchorScrolling: 'enabled', onSameUrlNavigation: 'reload' })],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(RoutingService.routes, { anchorScrolling: 'enabled', onSameUrlNavigation: 'reload' })], //onSameUrlNavigation: 'ignore'
+  exports: [RouterModule],
+  providers: [CookieService]
 })
 export class AppRoutingModule { }
