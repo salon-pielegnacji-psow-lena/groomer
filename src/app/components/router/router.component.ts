@@ -17,7 +17,7 @@ export class RouterComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     setTimeout(() => {
       this.redirect();
-    }, 1);    
+    }, 200);    
   }  
   redirect() {
     this.route.fragment.pipe(first()).subscribe(f => {
@@ -27,6 +27,6 @@ export class RouterComponent implements AfterViewInit {
   ngDoCheck(){
     setTimeout(() => {
       location.href = '/groomer';
-    }, 1); 
+    }, 200); 
   }
 }
