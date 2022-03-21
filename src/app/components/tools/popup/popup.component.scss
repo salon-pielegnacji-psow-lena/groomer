@@ -47,7 +47,7 @@
 }
 .popup-content {    
 	position: relative;    
-    width: 90vw;
+    width: 92vw;
     height: calc(90vh - 40px);
     overflow-y: auto;
     padding-left: 15px;  	
@@ -55,6 +55,8 @@
     font-size: 16px; 
     line-height: 150%;
 }
+
+
 
 @keyframes popup-show {
     0% { transform: scale(0); opacity: 0; }
@@ -70,11 +72,18 @@
         position: fixed;  
         left: 18vw;   
     }
-    .popup-content { 
-        left: 2vw;   
-        width: 55vw;
+    .popup-content {    
+        width: 57.5vw;
         font-size: 17px;  
+    }   
+    .popup-content::-webkit-scrollbar{
+        width: 10px;
+        background-color: transparent;
     }
+    .popup-content::-webkit-scrollbar-thumb {
+        background: rgb(248, 245, 245); 
+        border-radius: 25px;
+    } 
 }
 @media screen and (min-width: $pc-width-plus-one) {
     .popup {
@@ -84,8 +93,15 @@
         left: 23vw;   
     }
     .popup-content { 
-        left: 2vw;   
-        width: 45vw; 
+        width: 47.5vw; 
         font-size: 19px; 
+    }
+    .popup-content::-webkit-scrollbar{
+        width: 10px;
+        background-color: transparent;
+    }
+    .popup-content::-webkit-scrollbar-thumb {
+        background: rgb(248, 245, 245); 
+        border-radius: 25px;
     }
 }

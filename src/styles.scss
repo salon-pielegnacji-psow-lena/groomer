@@ -202,15 +202,39 @@ body {
     .site > main {       
         width: 80vw;          
     }
+    body::-webkit-scrollbar{
+        width: 10px;
+        background-color: rgb(247, 243, 243);
+    }
+    body::-webkit-scrollbar-thumb {
+        background: rgb(197, 197, 197); 
+        border-radius: 25px;
+    }
 }
 @media screen and (min-width: $pc-width) and (max-width: $pc-width-max) {
     .site > main {       
         width: 70vw;          
     }
+    body::-webkit-scrollbar{
+        width: 10px;
+        background-color: rgb(247, 243, 243);
+    }
+    body::-webkit-scrollbar-thumb {
+        background: rgb(197, 197, 197); 
+        border-radius: 25px;
+    }
 }
 @media screen and (min-width: $pc-width-max-plus-one) {
     .site > main {       
         width: 60vw;          
+    }
+    body::-webkit-scrollbar{
+        width: 10px;
+        background-color: rgb(247, 243, 243);
+    }
+    body::-webkit-scrollbar-thumb {
+        background: rgb(197, 197, 197); 
+        border-radius: 25px;
     }
 }
 @media screen and (max-height: $mobile-landscape-min-height) {

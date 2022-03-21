@@ -27,8 +27,11 @@
     background-size: cover;
     animation: loader-scale 0.7s infinite;
     animation-delay: 0.3s;
+    display: table;
+    margin: 0 auto;
   }
   .message{
+    width: 100%;
     text-align: center;
   }
     @keyframes loader-scale {
