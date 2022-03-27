@@ -32,7 +32,22 @@ export class GallerySiteComponent implements OnInit {
   }
   initBeforeAfter() {
     for (let i = 1; i <= 6; i++) {
-      this.beforeAfterElements.push(new GalleryElement(`Przed: ${i} i po: ${i}`, [`assets/images/przed${i}.jpg`, `assets/images/po${i}.jpg`]));
+      this.beforeAfterElements.push(new GalleryElement(`Przed i po`, [`assets/images/przed${i}.jpg`, `assets/images/po${i}.jpg`]));
     }
+    let photos = [114, 72];
+    this.loadBeforeAfter(photos);
+    photos = [116, 115];
+    this.loadBeforeAfter(photos);
+    photos = [91, 90];
+    this.loadBeforeAfter(photos);
+    photos = [92, 119];
+    this.loadBeforeAfter(photos);
+    photos = [107, 108];
+    this.loadBeforeAfter(photos);
+    photos = [112, 113];
+    this.loadBeforeAfter(photos);
+  }
+  private loadBeforeAfter(photos: number[]) {
+    this.beforeAfterElements.push(new GalleryElement(`Przed i po`, [`assets/images/${photos[0]}.jpg`, `assets/images/${photos[1]}.jpg`]));
   }
 }
