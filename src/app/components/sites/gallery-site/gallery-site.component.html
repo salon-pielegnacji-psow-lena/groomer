@@ -1,0 +1,27 @@
+<div class="site">
+    <main>
+        <h4>GALERIA</h4> 
+        <table class="table">
+            <tbody>
+                <tr>  
+                    <td>
+                        <div class="item before-after">                            
+                            <app-button [isBig]="false" (click)="showGalleryBeforeAfter()">Przed i po</app-button>
+                            <div class="shadow"></div>
+                        </div>
+                    </td>
+                </tr>  
+                <tr>                   
+                    <td>
+                        <div class="item salon">
+                            <app-button [isBig]="false" (click)="showGallerySalon()">Salon</app-button>                           
+                            <div class="shadow"></div>
+                        </div>
+                    </td>
+                </tr>                    
+            </tbody>
+        </table>       
+    </main>    
+</div>
+<app-gallery [defaultHidden]="true" [(shown)]="popupShownGallerySalon" [elements]="salonElements"></app-gallery>
+<app-gallery [defaultHidden]="true" [(shown)]="popupShownGalleryBeforeAfter" [elements]="beforeAfterElements"></app-gallery>

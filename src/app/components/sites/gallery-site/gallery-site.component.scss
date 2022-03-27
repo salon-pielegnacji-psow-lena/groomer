@@ -1,8 +1,11 @@
 @import "../../../../scss/colors.scss";
 @import "../../../../scss/sizes.scss";
 
+table {
+    max-width: 600px;
+}
 .item {    
-    height: 180px;
+    height: 240px;
     width: 100%;   
     box-shadow: 0.3px 0.3px 5px 0.3px $box-shadow-color-medium;   
     display: table;
@@ -14,27 +17,24 @@
     position: relative;  
 }
 .item:first-child {
-    padding-top: 70px;  
+    padding-top: 170px;  
 }
 .shadow {
-    background-color: rgb(255, 255, 255);
-    opacity: 0.6;
-    height: 250px;
+    background-color: rgb(194, 192, 192);
+    opacity: 0.1;
+    height: 420px;
     width: 100%;  
-    margin-top: -164px;    
+    margin-top: -218px;    
 }
-.qualifications {
-    background-image: url("../../../../assets/images/kwalifikacje1.jpg");
+.salon {
+    background-image: url("../../../../assets/images/gallery.jpg");
     background-size: cover;
     background-repeat: no-repeat;   
 }
-.information {
-    opacity: 0.3; 
-    text-align: left;
-    padding: 10px;  
-}
-.advices {
-    @extend .information;
+.before-after {
+    background-image: url("../../../../assets/images/before-after.png");
+    background-size: cover;
+    background-repeat: no-repeat;   
 }
 
 @media screen and (max-width: $tablet-width) {

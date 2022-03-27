@@ -77,5 +77,5 @@ export class GalleryComponent implements OnInit {
   onKeydownEscape(event: KeyboardEvent) {
     event.preventDefault();
     this.hide();
-  }
+  } 
 }

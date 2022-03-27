@@ -10,16 +10,11 @@ export class MoreComponent implements OnInit {
 
   popupShownInformation = false;
   popupShownAdvices = false;
-  popupShownGallerySalon = false;
-  popupShownGalleryBeforeAfter = false;
   popupShownQualifications = false;
-  salonElements: GalleryElement[] = [];
-  beforeAfterElements: GalleryElement[] = [];
+
   qualificationElements: GalleryElement[] = [];
 
   constructor() {
-    this.initSalon();
-    this.initBeforeAfter();
     this.initQualifications();
   }
 
@@ -31,25 +26,10 @@ export class MoreComponent implements OnInit {
   showAdvices() {
     this.popupShownAdvices = true;
   }
-  showGallerySalon() {
-    this.popupShownGallerySalon = true;
-  }
-  showGalleryBeforeAfter() {
-    this.popupShownGalleryBeforeAfter = true;
-  }
   showQualifications() {
     this.popupShownQualifications = true;
   }
-  initSalon() {
-    for (let i = 1; i <= 6; i++) {
-      this.salonElements.push(new GalleryElement("", [`assets/images/salon${i}.jpg`]));
-    }
-  }
-  initBeforeAfter() {
-    for (let i = 1; i <= 6; i++) {
-      this.beforeAfterElements.push(new GalleryElement("Przed i po", [`assets/images/przed${i}.jpg`, `assets/images/po${i}.jpg`]));
-    }
-  }
+
   initQualifications() {
     this.qualificationElements.push(new GalleryElement(`6 czerwca 2013 roku zdałam państwowy egzamin przed Komisją Izby Rzemieślniczej oraz 
       Małej i Średniej Przedsiebierczości w Katowicach. Uzyskałam tytuł MISTRZA w zawodzie GROOMER - FRYZJER ZWIERZĄT 😊`

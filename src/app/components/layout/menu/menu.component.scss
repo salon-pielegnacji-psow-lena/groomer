@@ -83,11 +83,11 @@
     }
     .HOME-menu {
         left: 0;
-        top: 70px;
+        top: 60px;
     }
     .HOME-menu li {
         min-width: 20px;
-        padding: 2px;
+        padding: 0px;
     }
     .HOME-menu .description,
     .description {
@@ -107,8 +107,7 @@
         left: 20px;
         top: 120px;
     }
-    .HOME-menu > ul {
-        margin-top: 10px;
+    .HOME-menu > ul {      
         margin-left: 10%;
         display: flex;   
         flex-direction: column;
@@ -116,21 +115,8 @@
     }
     .HOME-menu li {
         min-width: 20px;
-        padding: 7px 10px;
+        padding: 2px 10px;
     }
-    // .HOME-menu .description {
-    //     font-size: 14px;
-    // }  
-    // .HOME-menu .icon {
-    //    display: none;
-    // }     
-    // .HOME-menu > ul .active-link { 
-    //     font-weight: bold;
-    //     pointer-events: none;    
-    // }
-    // .description {
-    //     display: none;
-    // } 
     .HOME-menu .description,
     .description {
         display: none;

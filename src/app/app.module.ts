@@ -7,9 +7,6 @@ import { HomeComponent } from './components/sites/home/home.component';
 import { AboutComponent } from './components/sites/about/about.component';
 import { ContactComponent } from './components/sites/contact/contact.component';
 import { OfferComponent } from './components/sites/offer/offer.component';
-import { RegisterComponent } from './components/sites/register/register.component';
-import { LoginComponent } from './components/sites/login/login.component';
-import { AdminComponent } from './components/sites/admin/admin.component';
 import { LayoutComponent } from './components/layout/layout/layout.component';
 import { MenuComponent } from './components/layout/menu/menu.component';
 import { HeaderComponent } from './components/layout/header/header.component';
@@ -36,6 +33,7 @@ import { CopyTextDirective } from './directives/copy-text.directive';
 import { TranslateDirective } from './directives/translate.directive';
 import { PawsComponent } from './components/tools/paws/paws.component';
 import { FacebookComponent } from './components/tools/facebook/facebook.component';
+import { GallerySiteComponent } from './components/sites/gallery-site/gallery-site.component';
 
 @NgModule({
   declarations: [
@@ -44,9 +42,6 @@ import { FacebookComponent } from './components/tools/facebook/facebook.componen
     AboutComponent,
     ContactComponent,
     OfferComponent,
-    RegisterComponent,
-    LoginComponent,
-    AdminComponent,
     LayoutComponent,
     MenuComponent,
     HeaderComponent,
@@ -70,7 +65,8 @@ import { FacebookComponent } from './components/tools/facebook/facebook.componen
     CopyTextDirective,
     TranslateDirective,
     PawsComponent,
-    FacebookComponent
+    FacebookComponent,
+    GallerySiteComponent
   ],
   imports: [
     BrowserModule,
