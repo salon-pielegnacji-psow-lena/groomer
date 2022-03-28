@@ -27,13 +27,10 @@ export class GallerySiteComponent implements OnInit {
   }
   initSalon() {
     for (let i = 1; i <= 6; i++) {
-      this.salonElements.push(new GalleryElement(i.toString(), [`assets/images/salon${i}.jpg`]));
+      this.salonElements.push(new GalleryElement("", [`assets/images/salon${i}.jpg`]));
     }
   }
-  initBeforeAfter() {
-    for (let i = 1; i <= 6; i++) {
-      this.beforeAfterElements.push(new GalleryElement(`Przed i po`, [`assets/images/przed${i}.jpg`, `assets/images/po${i}.jpg`]));
-    }
+  initBeforeAfter() {  
     let photos = [114, 72];
     this.loadBeforeAfter(photos);
     photos = [116, 115];
