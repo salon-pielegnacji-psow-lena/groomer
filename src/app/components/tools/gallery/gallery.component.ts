@@ -12,9 +12,9 @@ export class GalleryComponent implements OnInit {
 
   faTimes = faTimes;
   faAngleLeft = faAngleLeft;
-  faAngleRight = faAngleRight;
-  currentElement: number = 0;
+  faAngleRight = faAngleRight;  
   showError = false;
+  @Input() currentElement: number = 0;
   @Input() shown = false;
   @Output() shownChange = new EventEmitter<boolean>();
 

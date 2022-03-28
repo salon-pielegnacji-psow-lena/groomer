@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { GalleryElement } from 'src/app/models/gallery-element';
 
 @Component({
@@ -6,23 +6,31 @@ import { GalleryElement } from 'src/app/models/gallery-element';
   templateUrl: './gallery-site.component.html',
   styleUrls: ['./gallery-site.component.scss']
 })
-export class GallerySiteComponent implements OnInit {
+export class GallerySiteComponent implements AfterViewInit {
 
   popupShownGallerySalon = false;
   popupShownGalleryBeforeAfter = false;
+  currentElement: number = 0;
   salonElements: GalleryElement[] = [];
   beforeAfterElements: GalleryElement[] = [];
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
     this.initSalon();
     this.initBeforeAfter();
+   }
+  ngAfterViewInit(): void {
+    
   }
-  showGallerySalon() {
+
+  ngOnInit(): void {
+
+  }
+  showGallerySalon(i: number) {
+    this.currentElement = i;
     this.popupShownGallerySalon = true;
   }
-  showGalleryBeforeAfter() {
+  showGalleryBeforeAfter(i: number) {
+    this.currentElement = i;
     this.popupShownGalleryBeforeAfter = true;
   }
   initSalon() {

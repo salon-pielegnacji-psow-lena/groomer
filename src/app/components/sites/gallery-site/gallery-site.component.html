@@ -1,27 +1,53 @@
 <div class="site">
     <main>
-        <h4>GALERIA</h4> 
-        <table class="table">
+        <h4>GALERIA</h4>
+        <p class="underline">Salon</p>
+        <table class="table-3">
             <tbody>
-                <tr>  
-                    <td>
-                        <div class="item before-after">                            
-                            <app-button [isBig]="false" (click)="showGalleryBeforeAfter()">Przed i po</app-button>
-                            <div class="shadow"></div>
-                        </div>
+                <tr >
+                    <td class="salon">
+                        <img [src]="salonElements[0].images[0]" (click)="showGallerySalon(0)">
                     </td>
-                </tr>  
-                <tr>                   
-                    <td>
-                        <div class="item salon">
-                            <app-button [isBig]="false" (click)="showGallerySalon()">Salon</app-button>                           
-                            <div class="shadow"></div>
-                        </div>
+                    <td class="salon">
+                        <img [src]="salonElements[1].images[0]" (click)="showGallerySalon(1)">
                     </td>
-                </tr>                    
+                    <td class="salon">
+                        <img [src]="salonElements[2].images[0]" (click)="showGallerySalon(2)">
+                    </td>                    
+                </tr>
             </tbody>
-        </table>       
-    </main>    
+        </table>
+        <table class="table-3">
+            <tbody>
+                <tr >
+                    <td class="salon">
+                        <img [src]="salonElements[3].images[0]" (click)="showGallerySalon(3)">
+                    </td>
+                    <td class="salon">
+                        <img [src]="salonElements[4].images[0]" (click)="showGallerySalon(4)">
+                    </td>
+                    <td class="salon">
+                        <img [src]="salonElements[5].images[0]" (click)="showGallerySalon(5)">
+                    </td>                    
+                </tr>
+            </tbody>
+        </table>
+        <p class="underline">Przed i Po</p>
+        <table class="table-2">
+            <tbody>
+                <tr >
+                    <div *ngFor="let el of beforeAfterElements; index as i">
+                        <td class="before-after before">
+                            <img src={{el.images[0]}} (click)="showGalleryBeforeAfter(i)">
+                        </td>
+                        <td class="before-after after">
+                            <img src={{el.images[1]}} (click)="showGalleryBeforeAfter(i)">
+                        </td>                        
+                    </div>
+                </tr>
+            </tbody>
+        </table>
+    </main>
 </div>
-<app-gallery [defaultHidden]="true" [(shown)]="popupShownGallerySalon" [elements]="salonElements"></app-gallery>
-<app-gallery [defaultHidden]="true" [(shown)]="popupShownGalleryBeforeAfter" [elements]="beforeAfterElements"></app-gallery>
+<app-gallery [defaultHidden]="true" [(shown)]="popupShownGallerySalon" [currentElement]="currentElement" [elements]="salonElements"></app-gallery>
+<app-gallery [defaultHidden]="true" [(shown)]="popupShownGalleryBeforeAfter" [currentElement]="currentElement" [elements]="beforeAfterElements"></app-gallery>

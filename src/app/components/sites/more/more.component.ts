@@ -66,5 +66,8 @@ export class MoreComponent implements OnInit {
     this.qualificationElements.push(new GalleryElement(`Rok 2014 - Marzec - Seminarium Groomerskie "Trymowanie ras: sznaucer średni i cocker spaniel angielski". 
       Seminarium prowadził włoski groomer, sędzia międzynarodowy w groomingu - ROBERTO SALVATORI 😊`
       , [`assets/images/seminarium.jpg`]));
+    this.qualificationElements.push(new GalleryElement(``, [`assets/images/certyfikat060520.jpg`]));
+    this.qualificationElements.push(new GalleryElement(``, [`assets/images/certyfikat120520.jpg`]));
+    this.qualificationElements.push(new GalleryElement(``, [`assets/images/certyfikat140321.jpg`]));
   }
 }
