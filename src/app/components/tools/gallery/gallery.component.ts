@@ -30,7 +30,8 @@ export class GalleryComponent implements OnInit {
       this.show();
     }
   }
-  show() {   
+  show() {  
+    
     if (this.elements.length > 0) {     
       this.showError = false;
       this.scrollService.setScroll(!this.shown);
@@ -46,7 +47,7 @@ export class GalleryComponent implements OnInit {
   hide() {
     this.shown = false;
     this.scrollService.setScroll(!this.shown);
-    this.currentElement = 0;
+    //this.currentElement = 0;
     this.shownChange.emit(this.shown);
   }
   goLeft() {

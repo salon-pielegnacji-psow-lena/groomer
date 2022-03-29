@@ -17,9 +17,9 @@ export class GallerySiteComponent implements AfterViewInit {
   constructor() {
     this.initSalon();
     this.initBeforeAfter();
-   }
+  }
   ngAfterViewInit(): void {
-    
+
   }
 
   ngOnInit(): void {
@@ -38,7 +38,7 @@ export class GallerySiteComponent implements AfterViewInit {
       this.salonElements.push(new GalleryElement("", [`assets/images/salon${i}.jpg`]));
     }
   }
-  initBeforeAfter() {  
+  initBeforeAfter() {
     let photos = [114, 72];
     this.loadBeforeAfter(photos);
     photos = [116, 115];
