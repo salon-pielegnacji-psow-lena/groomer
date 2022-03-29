@@ -8,7 +8,7 @@
     position: fixed;
     top:0; 
     left: 0;
-    background-color: #080808;  
+    background: linear-gradient(to right bottom,#7716c7,#9f4885 20%,#fab 50%,#9f4885 80%,#7716c7);
     animation: gallery-show 0.7s forwards;
     animation-delay: 0s;  
     opacity: 0;
@@ -92,14 +92,15 @@
 .content-footer {
     position: absolute;    
     width: 94%; 
-    max-height: 15vh;
+    max-height: 16vh;
     overflow:auto;
     bottom: 0;
     text-align: center;
     padding: 5px 3%;
-    color: $main-color-gray-light; 
-    background-color: #080808;   
-    opacity: 0.8; 
+    color: black; 
+    background: linear-gradient(to right bottom, #fab 10%,#9f4885 70%, #a02daa); //#9f4885; 
+    opacity: 0.85; 
+    border-radius: 3px;
 }
 img {
     max-width:100%;
@@ -123,7 +124,7 @@ img {
         margin-top: 1vh;  
     }  
     .content {
-        height: 80vh;
+        height: 90vh;
     }
     .content-img {
         height: 80vh;
@@ -139,7 +140,7 @@ img {
         margin-top: 1vh;  
     } 
     .content {
-        height: 80vh;
+        height: 90vh;
     }
     .content-img {
         height: 80vh;
@@ -147,7 +148,7 @@ img {
 }
 @media screen and (min-width: $tablet-width) and (max-width: $small-pc-width) {
     .content {
-        height: 80vh;
+        height: 90vh;
     }
     .content-img {
         height: 80vh;

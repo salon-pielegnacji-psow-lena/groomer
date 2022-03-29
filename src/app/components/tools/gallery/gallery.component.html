@@ -9,7 +9,7 @@
                 <div [ngClass]="{'content-img': element.images.length == 1, 'content-multi-img': element.images.length > 1}">
                     <img [ngClass]="{'img': element.images.length == 1, 'multi-img': element.images.length > 1}" *ngFor="let src of element.images" [src]="src" >
                 </div>
-                <div class="content-footer">
+                <div *ngIf="element.description.length > 0" class="content-footer">
                     {{element.description}}
                 </div>
             </section>
