@@ -1,4 +1,4 @@
-<div class="site">
+<!-- <div class="site">
     <main>
         <h4>GALERIA</h4>
         <p class="underline">Salon</p>
@@ -50,4 +50,125 @@
     </main>
 </div>
 <app-gallery [defaultHidden]="true" [(shown)]="popupShownGallerySalon" [currentElement]="currentElement" [elements]="salonElements"></app-gallery>
-<app-gallery [defaultHidden]="true" [(shown)]="popupShownGalleryBeforeAfter" [currentElement]="currentElement" [elements]="beforeAfterElements"></app-gallery>
+<app-gallery [defaultHidden]="true" [(shown)]="popupShownGalleryBeforeAfter" [currentElement]="currentElement" [elements]="beforeAfterElements"></app-gallery> -->
+
+
+<div class="site">
+    <main>
+        <h4>GALERIA</h4> 
+        <table class="table">
+            <tbody>
+                <tr>  
+                    <td colspan="2">
+                        <div class="item-big before-after">                            
+                            <app-button [isBig]="false" (click)="showGalleryBeforeAfter(0)">Przed i po</app-button>
+                            <div class="shadow"></div>
+                        </div>
+                    </td>
+                </tr>  
+                <tr>                   
+                    <td>
+                        <div class="item-small salon">
+                            <app-button [isBig]="false" (click)="showGallerySalon(0)">Salon</app-button>                           
+                        </div>
+                    </td>                 
+                    <td>
+                        <div class="item-small metamorphosis">
+                            <app-button [isBig]="false" (click)="showGalleryMetamorphosis(0)">Metamorfozy</app-button>                           
+                        </div>
+                    </td>
+                </tr>                   
+            </tbody>
+        </table>       
+    </main>    
+</div>
+
+<!-- <app-popup title="Metamorfozy" [defaultHidden]="true" [(shown)]="popupShownMetamorphosis">
+    <p class="underline">York</p>
+    <table class="table-4">
+        <tbody>
+            <tr>  
+                <td>
+                    <div class="">                            
+                        <img [src]="metamorphosisElements[0].images[0]" (click)="showGalleryMetamorphosis(0)">
+                    </div>
+                </td>
+                <td>
+                    <div class="">                            
+                        <img [src]="metamorphosisElements[1].images[0]" (click)="showGalleryMetamorphosis(1)">
+                    </div>
+                </td>
+                <td>
+                    <div class="">                            
+                        <img [src]="metamorphosisElements[2].images[0]" (click)="showGalleryMetamorphosis(2)">
+                    </div>
+                </td>
+                <td>
+                    <div class="">                            
+                        <img [src]="metamorphosisElements[3].images[0]" (click)="showGalleryMetamorphosis(3)">
+                    </div>
+                </td>
+            </tr>  
+            <tr>  
+                <td>
+                    <div class="">                            
+                        <img [src]="metamorphosisElements[4].images[0]" (click)="showGalleryMetamorphosis(4)">
+                    </div>
+                </td>
+                <td>
+                    <div class="">                            
+                        <img [src]="metamorphosisElements[5].images[0]" (click)="showGalleryMetamorphosis(5)">
+                    </div>
+                </td>
+                <td>
+                    <div class="">                            
+                        <img [src]="metamorphosisElements[6].images[0]" (click)="showGalleryMetamorphosis(6)">
+                    </div>
+                </td>
+                <td>
+                    <div class="">                            
+                        <img [src]="metamorphosisElements[7].images[0]" (click)="showGalleryMetamorphosis(7)">
+                    </div>
+                </td>
+            </tr>     
+            <tr>  
+                <td>
+                    <div class="">                            
+                        <img [src]="metamorphosisElements[8].images[0]" (click)="showGalleryMetamorphosis(8)">
+                    </div>
+                </td>
+                <td>
+                    <div class="">                            
+                        <img [src]="metamorphosisElements[9].images[0]" (click)="showGalleryMetamorphosis(9)">
+                    </div>
+                </td>
+                <td>
+                    <div class="">                            
+                        <img [src]="metamorphosisElements[10].images[0]" (click)="showGalleryMetamorphosis(10)">
+                    </div>
+                </td>
+                <td>
+                    <div class="">                            
+                        <img [src]="metamorphosisElements[11].images[0]" (click)="showGalleryMetamorphosis(11)">
+                    </div>
+                </td>
+            </tr>    
+            <tr>  
+                <td>
+                    <div class="">                            
+                        <img [src]="metamorphosisElements[12].images[0]" (click)="showGalleryMetamorphosis(12)">
+                    </div>
+                </td>
+                <td>
+                    <div class="">                            
+                        <img [src]="metamorphosisElements[13].images[0]" (click)="showGalleryMetamorphosis(13)">
+                    </div>
+                </td>            
+            </tr>                        
+        </tbody>
+    </table> 
+</app-popup> -->
+
+<app-gallery [defaultHidden]="true" [(shown)]="popupShownGallerySalon" [elements]="salonElements"></app-gallery>
+<app-gallery [defaultHidden]="true" [(shown)]="popupShownGalleryBeforeAfter" [elements]="beforeAfterElements"></app-gallery>
+<app-gallery [defaultHidden]="true" [(shown)]="popupShownGalleryMetamorphosis" [elements]="metamorphosisElements"></app-gallery>

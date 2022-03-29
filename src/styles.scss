@@ -193,7 +193,11 @@ h4 {
         opacity: 1;
      } 
 } 
-
+@media screen and (max-width: $mobile-width) {
+    .site > main {       
+        width: 95vw;          
+    }
+}
 @media screen and (min-width: $mobile-width) and (max-width: $tablet-width) {
     .site > main {       
         width: 90vw;          

@@ -1,67 +1,126 @@
 @import "../../../../scss/colors.scss";
 @import "../../../../scss/sizes.scss";
 
-.before-base {
-    color: white;
-    z-index: 999;
-    margin: 20px;
-    position: absolute;
-    font-weight: bold;
+// .before-base {
+//     color: white;
+//     z-index: 999;
+//     margin: 20px;
+//     position: absolute;
+//     font-weight: bold;
+// }
+// .before::before {
+//     content: "Przed";
+//     @extend .before-base;
+// }
+// .after::before {
+//     content: "Po";
+//     @extend .before-base;
+// }
+// .salon {
+//     background-size:cover;
+//     background-repeat: no-repeat;  
+//     max-width: 100%;   
+// }
+// .table-2 img {
+//     background-size:cover;
+//     background-repeat: no-repeat;  
+//     max-width: 95%;   
+//     box-shadow: 0.6px 0.6px 5px 0.6px $box-shadow-color-medium;  
+// }
+// .table-3 img {
+//     background-size:cover;
+//     background-repeat: no-repeat;  
+//     max-width: 100%;   
+//     box-shadow: 0.6px 0.6px 5px 0.6px $box-shadow-color-medium;  
+// }
+// .table-2 img:hover,
+// .table-3 img:hover {
+//     transform: scale(1.02);
+//     box-shadow: 0px 1px 15px 2px $box-shadow-color-medium; 
+// }
+// .table-2 {
+//     max-width: 600px;
+// }
+// .table-2 td {
+//     width: 50%;
+// }
+// .table-3 td {
+//     width: 33.3%;
+// }
+// @media screen and (max-width: $tablet-width) {
+//     .table-2 tr {
+//         display: inline;
+//         width: 100%;
+//     }
+//     .table-2 td {
+//         width: 50%;
+//         display: table-cell;
+//     }
+//     .table-3 tr {
+//         display: inline;
+//         width: 100%;
+//     }
+//     .table-3 td {
+//         width: 80%;
+//         display: table;
+//     }
+// }
+
+table {
+    max-width: 850px;
 }
-.before::before {
-    content: "Przed";
-    @extend .before-base;
+.item {    
+    width: 100%;   
+    box-shadow: 0.6px 0.6px 5px 0.6px $box-shadow-color-medium;   
+    display: table;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    opacity: 1.5; 
+    position: relative;  
 }
-.after::before {
-    content: "Po";
-    @extend .before-base;
+.item-small {
+    @extend .item;
+    height: 250px;
+    max-width: 526px;
+}
+.item-small:first-child {
+    padding-top: 30px;  
+}
+.item-big {
+    @extend .item;
+    height: 240px;
+    max-width: 526px;
+}
+.item-big:first-child {
+    padding-top: 170px;  
+}
+.shadow {
+    background-color: rgb(194, 192, 192);
+    opacity: 0.1;
+    height: 420px;
+    width: 100%;  
+    margin-top: -218px;    
 }
 .salon {
-    background-size:cover;
+    background-image: url("../../../../assets/images/gallery.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;   
+}
+.before-after {
+    background-image: url("../../../../assets/images/before-after.png");
+    background-size: cover;
+    background-repeat: no-repeat;   
+}
+.metamorphosis {
+    background-image: url("../../../../assets/images/metamorfozy/19.jpg");
+    background-size: cover;
     background-repeat: no-repeat;  
-    max-width: 100%;   
-}
-.table-2 img {
-    background-size:cover;
-    background-repeat: no-repeat;  
-    max-width: 95%;   
-    box-shadow: 0.6px 0.6px 5px 0.6px $box-shadow-color-medium;  
-}
-.table-3 img {
-    background-size:cover;
-    background-repeat: no-repeat;  
-    max-width: 100%;   
-    box-shadow: 0.6px 0.6px 5px 0.6px $box-shadow-color-medium;  
-}
-.table-2 img:hover,
-.table-3 img:hover {
-    transform: scale(1.02);
-    box-shadow: 0px 1px 15px 2px $box-shadow-color-medium; 
-}
-.table-2 {
-    max-width: 600px;
-}
-.table-2 td {
-    width: 50%;
-}
-.table-3 td {
-    width: 33.3%;
 }
 @media screen and (max-width: $tablet-width) {
-    .table-2 tr {
-        display: inline;
-        width: 100%;
-    }
-    .table-2 td {
-        width: 50%;
-        display: table-cell;
-    }
-    .table-3 tr {
-        display: inline;
-        width: 100%;
-    }
-    .table-3 td {
-        width: 80%;
+    td {
+        width: 95%;
         display: table;
     }
 }
