@@ -18,7 +18,7 @@ export class OfferComponent implements OnInit {
 
   ngOnInit(): void {
     this.cutting.push(new TableRow(1, ['York mini', 'od 100 zł']));
-    this.cutting.push(new TableRow(1, ['York, York Biewer, Maltańczyk mini', 'od 110 zł']));
+    this.cutting.push(new TableRow(1, ['York, York Biewer', 'od 110 zł']));
     this.cutting.push(new TableRow(1, ['Maltańczyk, Pudel Toy, Bolończyk', 'od 120 zł']));
     this.cutting.push(new TableRow(1, ['Shih-Tzu, Hawańczyk, Maltipoo, Bichon', 'od 130 zł']));
     this.cutting.push(new TableRow(1, ['West terier, Coton de Tulaer, Pudel min.', 'od 130 zł']));
@@ -31,12 +31,13 @@ export class OfferComponent implements OnInit {
     this.modeling.push(new TableRow(1, ['Jamnik szorstkowłosy', '140 - 160 zł']));
     this.modeling.push(new TableRow(1, ['Jack Russell Terier', '150 - 160 zł']));
     this.modeling.push(new TableRow(1, ['Sznaucer min.', '150 - 160 zł']));
-    this.modeling.push(new TableRow(1, ['Cairn terier, Foxterier', '170 - 180 zł']));
-    this.modeling.push(new TableRow(1, ['West terier, Terier szkocki', '170 - 180 zł']));
+    this.modeling.push(new TableRow(1, ['Cairn terier, Foxterier', '170 - 190 zł']));
+    this.modeling.push(new TableRow(1, ['West terier, Terier szkocki', '170 - 190 zł']));
 
     this.other.push(new TableRow(1, ['KĄPIEL', 'od 70 zł']));
     this.other.push(new TableRow(1, ['KĄPIEL pieski mini', 'od 60 zł']));
-    this.other.push(new TableRow(1, ['Rozczesanie skołtunionej sierści', '70 zł/godz.']));
+    this.other.push(new TableRow(1, ['Rozczesanie skołtunionej sierści', '80 zł/godz.']));
+    this.other.push(new TableRow(1, ['Obcięcie pazurów', 'od 15 zł']));
   }
   goToContact(){
     this.routingService.redirect('contact');
