@@ -94,6 +94,11 @@ export class ScrollService {
     this.document.getElementById(url)?.scrollIntoView(behavior);
   
   }
+  scrollToElement(id:string) {
+    setTimeout(() => {
+      this.document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    }, 200);    
+  }
 
   private replaceState(url: string) {
     if (url) {

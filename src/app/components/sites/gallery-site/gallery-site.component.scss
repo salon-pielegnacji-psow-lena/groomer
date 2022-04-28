@@ -126,6 +126,9 @@ table {
     object-fit: cover;
     background-repeat: no-repeat;   
 }
+#metamorphosis {
+    padding-top: 50px;
+}
 @media screen and (max-width: $tablet-width) {
     td {
         width: 95%;

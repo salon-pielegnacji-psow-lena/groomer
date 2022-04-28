@@ -1,5 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { GalleryElement } from 'src/app/models/gallery-element';
+import { ScrollService } from 'src/app/services/scroll.service';
 
 @Component({
   selector: 'app-gallery-site',
@@ -41,7 +42,7 @@ export class GallerySiteComponent implements AfterViewInit {
 
   shownGalleryMetamorphosis: boolean = false;
 
-  constructor() {
+  constructor(private scrollService: ScrollService) {
     this.initSalon();
     this.initBeforeAfter();
     this.initMetamorphosis();
@@ -67,6 +68,9 @@ export class GallerySiteComponent implements AfterViewInit {
   }
   toggleGalleryMetamorphosis() {
     this.shownGalleryMetamorphosis = !this.shownGalleryMetamorphosis;
+    if (this.shownGalleryMetamorphosis) {
+      this.scrollService.scrollToElement('metamorphosis');
+    }
   }
   showConcreteGalleryMetamorphosis(name: string) {
     this.currentElement = 0;
@@ -129,8 +133,8 @@ export class GallerySiteComponent implements AfterViewInit {
       case "OwczarekSzetlandzkiElements":
         this.currentMetamorphosisElements = this.OwczarekSzetlandzkiElements;
         break;
-    }
-    this.popupShownGalleryMetamorphosis = true;
+    }    
+    this.popupShownGalleryMetamorphosis = true;    
   }
   initSalon() {
     for (let i = 1; i <= 6; i++) {
