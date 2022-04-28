@@ -75,6 +75,13 @@ h4 {
 .underline {
     text-decoration: underline;
 }
+.summaryButton {
+    display: table;
+    margin: 0 auto;
+    padding: 5px 0px;
+    width: 250px;
+    border: 1px solid black;
+}
 //Animations
 .animate-container {
     min-height: 50px;

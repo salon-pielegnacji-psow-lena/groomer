@@ -20,7 +20,7 @@ main {
     box-shadow: 2px 2px 15px 1px $box-shadow-color; 
     width: 98vw;
     max-width: 400px;
-    min-height: 70vh; 
+    min-height: 60vh; 
     max-height: 600px; 
     border-radius: 3px; 
     float: right;
@@ -57,7 +57,7 @@ main {
     position: absolute;
     text-align: center;
     width: 100%; 
-    top: 90vh;    
+    top: 78vh;    
   }
   @keyframes arrow-animated {
     0% { padding-top: 2vh; }
@@ -65,12 +65,15 @@ main {
     100% {padding-top: 2vh; }
 }
 .quote {
-    font-size: 16px;
+    font-size: 15px;
     font-style: italic;  
     text-align: center;
     position: relative;
-    width: 50%; 
-    left: 25%;    
+    width: 60%; 
+    left: 20%;    
+}
+.quote2 {
+    @extend .quote;
 }
 @media screen and (max-width: $tablet-width) {
     .brand {  
@@ -89,6 +92,10 @@ main {
         width: 70%; 
         left: 15%; 
     } 
+    .quote2 {
+        width: 90%;
+        left: 5%;
+    }
 }
 
 @media screen and (max-height: $mobile-landscape-min-height) and (min-width: $tablet-width) {

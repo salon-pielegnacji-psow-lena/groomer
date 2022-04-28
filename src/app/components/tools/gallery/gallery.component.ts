@@ -47,7 +47,7 @@ export class GalleryComponent implements OnInit {
   hide() {
     this.shown = false;
     this.scrollService.setScroll(!this.shown);
-    //this.currentElement = 0;
+    this.currentElement = 0;
     this.shownChange.emit(this.shown);
   }
   goLeft() {

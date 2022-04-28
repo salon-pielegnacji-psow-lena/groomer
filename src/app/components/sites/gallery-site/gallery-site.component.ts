@@ -17,7 +17,30 @@ export class GallerySiteComponent implements AfterViewInit {
   salonElements: GalleryElement[] = [];
   beforeAfterElements: GalleryElement[] = [];
   metamorphosisElements: GalleryElement[] = [];
-  
+  currentMetamorphosisElements: GalleryElement[] = [];
+
+  MaltanczykElements: GalleryElement[] = [];
+  ShihTzuElements: GalleryElement[] = [];
+  YorkElements: GalleryElement[] = [];
+  YorkBiewerElements: GalleryElement[] = [];
+  HawanczykElements: GalleryElement[] = [];
+  BichonElements: GalleryElement[] = [];
+  BolonkaElements: GalleryElement[] = [];
+  MaltipooElements: GalleryElement[] = [];
+  CotonDeTulerElements: GalleryElement[] = [];
+  PomeranianElements: GalleryElement[] = [];
+  ChinskiGrzywaczElements: GalleryElement[] = [];
+  CavalierElements: GalleryElement[] = [];
+  WestElements: GalleryElement[] = [];
+  SznaucerMinElements: GalleryElement[] = [];
+  CairTerierElements: GalleryElement[] = [];
+  JRTElements: GalleryElement[] = [];
+  JamnikSzrostkowlosyElements: GalleryElement[] = [];
+  BorderTerierElements: GalleryElement[] = [];
+  OwczarekSzetlandzkiElements: GalleryElement[] = [];
+
+  shownGalleryMetamorphosis: boolean = false;
+
   constructor() {
     this.initSalon();
     this.initBeforeAfter();
@@ -39,13 +62,74 @@ export class GallerySiteComponent implements AfterViewInit {
   showGalleryBeforeAfter(i: number | null) {
     if (i) {
       this.currentElement = i;
-    }    
+    }
     this.popupShownGalleryBeforeAfter = true;
   }
-  showGalleryMetamorphosis(i: number | null) {
-    if (i) {
-      this.currentElement = i;
-    }    
+  toggleGalleryMetamorphosis() {
+    this.shownGalleryMetamorphosis = !this.shownGalleryMetamorphosis;
+  }
+  showConcreteGalleryMetamorphosis(name: string) {
+    this.currentElement = 0;
+    this.currentMetamorphosisElements = [];
+    switch (name) {
+      case "MaltanczykElements":
+        this.currentMetamorphosisElements = this.MaltanczykElements;
+        break;
+      case "ShihTzuElements":
+        this.currentMetamorphosisElements = this.ShihTzuElements;
+        break;
+      case "YorkElements":
+        this.currentMetamorphosisElements = this.YorkElements;
+        break;
+      case "YorkBiewerElements":
+        this.currentMetamorphosisElements = this.YorkBiewerElements;
+        break;
+      case "HawanczykElements":
+        this.currentMetamorphosisElements = this.HawanczykElements;
+        break;
+      case "BichonElements":
+        this.currentMetamorphosisElements = this.BichonElements;
+        break;
+      case "BolonkaElements":
+        this.currentMetamorphosisElements = this.BolonkaElements;
+        break;
+      case "MaltipooElements":
+        this.currentMetamorphosisElements = this.MaltipooElements;
+        break;
+      case "CotonDeTulerElements":
+        this.currentMetamorphosisElements = this.CotonDeTulerElements;
+        break;
+      case "PomeranianElements":
+        this.currentMetamorphosisElements = this.PomeranianElements;
+        break;
+      case "ChinskiGrzywaczElements":
+        this.currentMetamorphosisElements = this.ChinskiGrzywaczElements;
+        break;
+      case "CavalierElements":
+        this.currentMetamorphosisElements = this.CavalierElements;
+        break;
+      case "WestElements":
+        this.currentMetamorphosisElements = this.WestElements;
+        break;
+      case "SznaucerMinElements":
+        this.currentMetamorphosisElements = this.SznaucerMinElements;
+        break;
+      case "CairTerierElements":
+        this.currentMetamorphosisElements = this.CairTerierElements;
+        break;
+      case "JRTElements":
+        this.currentMetamorphosisElements = this.JRTElements;
+        break;
+      case "JamnikSzrostkowlosyElements":
+        this.currentMetamorphosisElements = this.JamnikSzrostkowlosyElements;
+        break;
+      case "BorderTerierElements":
+        this.currentMetamorphosisElements = this.BorderTerierElements;
+        break;
+      case "OwczarekSzetlandzkiElements":
+        this.currentMetamorphosisElements = this.OwczarekSzetlandzkiElements;
+        break;
+    }
     this.popupShownGalleryMetamorphosis = true;
   }
   initSalon() {
@@ -76,7 +160,7 @@ export class GallerySiteComponent implements AfterViewInit {
     this.loadBeforeAfter(photos);
     photos = [1006, 1007];
     this.loadBeforeAfter(photos);
-  } 
+  }
   private loadBeforeAfter(photos: number[]) {
     this.beforeAfterElements.push(new GalleryElement(`Przed i po`, [`assets/images/${photos[0]}.jpg`, `assets/images/${photos[1]}.jpg`]));
   }
@@ -85,61 +169,61 @@ export class GallerySiteComponent implements AfterViewInit {
   }
   initMetamorphosis() {
     for (let i = 1; i <= 18; i++) {
-      this.metamorphosisElements.push(new GalleryElement(`Maltańczyk`, [`assets/images/metamorfozy/1_maltanczyk/${i}.jpg`]));
+      this.MaltanczykElements.push(new GalleryElement(`Maltańczyk`, [`assets/images/metamorfozy/1_maltanczyk/${i}.jpg`]));
     }
     for (let i = 1; i <= 20; i++) {
-      this.metamorphosisElements.push(new GalleryElement(`Shih Tzu`, [`assets/images/metamorfozy/2_shih_tzu/${i}.jpg`]));
+      this.ShihTzuElements.push(new GalleryElement(`Shih Tzu`, [`assets/images/metamorfozy/2_shih_tzu/${i}.jpg`]));
     }
     for (let i = 1; i <= 18; i++) {
-      this.metamorphosisElements.push(new GalleryElement(`York`, [`assets/images/metamorfozy/3_york/${i}.jpg`]));
+      this.YorkElements.push(new GalleryElement(`York`, [`assets/images/metamorfozy/3_york/${i}.jpg`]));
     }
     for (let i = 1; i <= 5; i++) {
-      this.metamorphosisElements.push(new GalleryElement(`York Biewer`, [`assets/images/metamorfozy/3_york_biewer/${i}.jpg`]));
+      this.YorkBiewerElements.push(new GalleryElement(`York Biewer`, [`assets/images/metamorfozy/3_york_biewer/${i}.jpg`]));
     }
     for (let i = 1; i <= 2; i++) {
-      this.metamorphosisElements.push(new GalleryElement(`Hawańczyk`, [`assets/images/metamorfozy/4_hawanczyk/${i}.jpg`]));
+      this.HawanczykElements.push(new GalleryElement(`Hawańczyk`, [`assets/images/metamorfozy/4_hawanczyk/${i}.jpg`]));
     }
     for (let i = 1; i <= 1; i++) {
-      this.metamorphosisElements.push(new GalleryElement(`Bichon`, [`assets/images/metamorfozy/5_bichon/${i}.jpg`]));
+      this.BichonElements.push(new GalleryElement(`Bichon`, [`assets/images/metamorfozy/5_bichon/${i}.jpg`]));
     }
     for (let i = 1; i <= 1; i++) {
-      this.metamorphosisElements.push(new GalleryElement(`Bolonka`, [`assets/images/metamorfozy/6_bolonka/${i}.jpg`]));
+      this.BolonkaElements.push(new GalleryElement(`Bolonka`, [`assets/images/metamorfozy/6_bolonka/${i}.jpg`]));
     }
     for (let i = 1; i <= 2; i++) {
-      this.metamorphosisElements.push(new GalleryElement(`Maltipoo`, [`assets/images/metamorfozy/7_maltipoo/${i}.jpg`]));
+      this.MaltipooElements.push(new GalleryElement(`Maltipoo`, [`assets/images/metamorfozy/7_maltipoo/${i}.jpg`]));
     }
     for (let i = 1; i <= 1; i++) {
-      this.metamorphosisElements.push(new GalleryElement(`Coton de tuler`, [`assets/images/metamorfozy/8_coton_de_tuler/${i}.jpg`]));
+      this.CotonDeTulerElements.push(new GalleryElement(`Coton De Tulear`, [`assets/images/metamorfozy/8_coton_de_tuler/${i}.jpg`]));
     }
     for (let i = 1; i <= 7; i++) {
-      this.metamorphosisElements.push(new GalleryElement(`Pomeranian`, [`assets/images/metamorfozy/9_pomeranian/${i}.jpg`]));
+      this.PomeranianElements.push(new GalleryElement(`Pomeranian`, [`assets/images/metamorfozy/9_pomeranian/${i}.jpg`]));
     }
     for (let i = 1; i <= 1; i++) {
-      this.metamorphosisElements.push(new GalleryElement(`Chiński grzywacz`, [`assets/images/metamorfozy/10_chinski_grzywacz/${i}.jpg`]));
+      this.ChinskiGrzywaczElements.push(new GalleryElement(`Chiński Grzywacz`, [`assets/images/metamorfozy/10_chinski_grzywacz/${i}.jpg`]));
     }
     for (let i = 1; i <= 3; i++) {
-      this.metamorphosisElements.push(new GalleryElement(`Cavalier`, [`assets/images/metamorfozy/11_cavalier/${i}.jpg`]));
+      this.CavalierElements.push(new GalleryElement(`Cavalier`, [`assets/images/metamorfozy/11_cavalier/${i}.jpg`]));
     }
     for (let i = 1; i <= 7; i++) {
-      this.metamorphosisElements.push(new GalleryElement(`West`, [`assets/images/metamorfozy/12_west/${i}.jpg`]));
+      this.WestElements.push(new GalleryElement(`West`, [`assets/images/metamorfozy/12_west/${i}.jpg`]));
     }
     for (let i = 1; i <= 3; i++) {
-      this.metamorphosisElements.push(new GalleryElement(`Sznaucer min`, [`assets/images/metamorfozy/13_sznaucer_min/${i}.jpg`]));
+      this.SznaucerMinElements.push(new GalleryElement(`Sznaucer min`, [`assets/images/metamorfozy/13_sznaucer_min/${i}.jpg`]));
     }
     for (let i = 1; i <= 2; i++) {
-      this.metamorphosisElements.push(new GalleryElement(`Cair Terier`, [`assets/images/metamorfozy/14_cair_terier/${i}.jpg`]));
+      this.CairTerierElements.push(new GalleryElement(`Cair Terier`, [`assets/images/metamorfozy/14_cair_terier/${i}.jpg`]));
     }
     for (let i = 1; i <= 1; i++) {
-      this.metamorphosisElements.push(new GalleryElement(`JRT`, [`assets/images/metamorfozy/15_JRT/${i}.jpg`]));
+      this.JRTElements.push(new GalleryElement(`JRT`, [`assets/images/metamorfozy/15_JRT/${i}.jpg`]));
     }
     for (let i = 1; i <= 1; i++) {
-      this.metamorphosisElements.push(new GalleryElement(`Jamnik Szrostkowłosy`, [`assets/images/metamorfozy/16_jamnik_szorstkowlosy/${i}.jpg`]));
+      this.JamnikSzrostkowlosyElements.push(new GalleryElement(`Jamnik Szrostkowłosy`, [`assets/images/metamorfozy/16_jamnik_szorstkowlosy/${i}.jpg`]));
     }
     for (let i = 1; i <= 1; i++) {
-      this.metamorphosisElements.push(new GalleryElement(`Border terier`, [`assets/images/metamorfozy/17_border_terier/${i}.jpg`]));
+      this.BorderTerierElements.push(new GalleryElement(`Border Terier`, [`assets/images/metamorfozy/17_border_terier/${i}.jpg`]));
     }
     for (let i = 1; i <= 1; i++) {
-      this.metamorphosisElements.push(new GalleryElement(`Owczarek Szetlandzki`, [`assets/images/metamorfozy/18_owczarek_szetlandzki/${i}.jpg`]));
+      this.OwczarekSzetlandzkiElements.push(new GalleryElement(`Owczarek Szetlandzki`, [`assets/images/metamorfozy/18_owczarek_szetlandzki/${i}.jpg`]));
     }
   }
 }

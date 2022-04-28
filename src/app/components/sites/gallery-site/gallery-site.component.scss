@@ -21,50 +21,50 @@
 //     background-repeat: no-repeat;  
 //     max-width: 100%;   
 // }
-// .table-2 img {
-//     background-size:cover;
-//     background-repeat: no-repeat;  
-//     max-width: 95%;   
-//     box-shadow: 0.6px 0.6px 5px 0.6px $box-shadow-color-medium;  
-// }
-// .table-3 img {
-//     background-size:cover;
-//     background-repeat: no-repeat;  
-//     max-width: 100%;   
-//     box-shadow: 0.6px 0.6px 5px 0.6px $box-shadow-color-medium;  
-// }
-// .table-2 img:hover,
-// .table-3 img:hover {
-//     transform: scale(1.02);
-//     box-shadow: 0px 1px 15px 2px $box-shadow-color-medium; 
-// }
-// .table-2 {
-//     max-width: 600px;
-// }
-// .table-2 td {
-//     width: 50%;
-// }
-// .table-3 td {
-//     width: 33.3%;
-// }
-// @media screen and (max-width: $tablet-width) {
-//     .table-2 tr {
-//         display: inline;
-//         width: 100%;
-//     }
-//     .table-2 td {
-//         width: 50%;
-//         display: table-cell;
-//     }
-//     .table-3 tr {
-//         display: inline;
-//         width: 100%;
-//     }
-//     .table-3 td {
-//         width: 80%;
-//         display: table;
-//     }
-// }
+.table-2 img {
+    background-size:cover;
+    background-repeat: no-repeat;  
+    max-width: 95%;   
+    box-shadow: 0.6px 0.6px 5px 0.6px $box-shadow-color-medium;  
+}
+.table-3 img {
+    background-size:cover;
+    background-repeat: no-repeat;  
+    max-width: 100%;   
+    box-shadow: 0.6px 0.6px 5px 0.6px $box-shadow-color-medium;  
+}
+.table-2 img:hover,
+.table-3 img:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 1px 15px 2px $box-shadow-color-medium; 
+}
+.table-2 {
+    max-width: 600px;
+}
+.table-2 td {
+    width: 50%;
+}
+.table-3 td {
+    width: 33.3%;
+}
+@media screen and (max-width: $tablet-width) {
+    .table-2 tr {
+        display: inline;
+        width: 100%;
+    }
+    .table-2 td {
+        width: 50%;
+        display: table-cell;
+    }
+    .table-3 tr {
+        display: inline;
+        width: 100%;
+    }
+    .table-3 td {
+        width: 80%;
+        display: table;
+    }
+}
 
 table {
     max-width: 850px;
@@ -118,9 +118,17 @@ table {
     background-size: cover;
     background-repeat: no-repeat;  
 }
+.methamorphosis {
+    cursor: pointer;
+}
+.methamorphosis img {  
+    height: 310px;   
+    object-fit: cover;
+    background-repeat: no-repeat;   
+}
 @media screen and (max-width: $tablet-width) {
     td {
         width: 95%;
         display: table;
-    }
+    }    
 }
