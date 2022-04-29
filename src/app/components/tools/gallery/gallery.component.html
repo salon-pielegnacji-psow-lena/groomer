@@ -1,8 +1,8 @@
 <div [ngClass]="{'gallery': shown}">
     <div *ngIf="shown" class="info">{{currentElement + 1}}/{{elements.length}}</div>
     <fa-icon *ngIf="shown" class="close-icon" (click)="hide()" [icon]="faTimes"></fa-icon>
-    <fa-icon *ngIf="shown" class="left-icon" (click)="goLeft()" [icon]="faAngleLeft"></fa-icon>
-    <fa-icon *ngIf="shown" class="right-icon" (click)="goRight()" [icon]="faAngleRight"></fa-icon>
+    <fa-icon *ngIf="shown && elements.length > 1" class="left-icon" (click)="goLeft()" [icon]="faAngleLeft"></fa-icon>
+    <fa-icon *ngIf="shown && elements.length > 1" class="right-icon" (click)="goRight()" [icon]="faAngleRight"></fa-icon>
     <main *ngIf="shown" class="content">
         <div *ngFor="let element of elements; index as i">
             <section *ngIf="shown && i == currentElement">
