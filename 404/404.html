@@ -34,7 +34,7 @@ permalink: /404.html
     top: 0;
   }
 
-  .button {  
+  .button {
     text-align: center;
     padding: 7px;
     outline: none;
@@ -45,20 +45,23 @@ permalink: /404.html
     border-radius: 4px;
     background-color: white;
     left: 30%;
-    width: 40%; 
-    text-decoration: none;  
-    cursor: pointer; 
+    width: 40%;
+    text-decoration: none;
+    cursor: pointer;
     color: rgb(66, 65, 65);
   }
+
   .button:hover {
     transform: scale(1.03);
     background-color: rgb(240, 238, 234);
   }
+
   .margin-top {
-    margin-top: 50px; 
+    margin-top: 50px;
   }
+
   .logo {
-    z-index: 1;   
+    z-index: 1;
     margin-top: 3vh;
     left: 3vw;
     background-color: white;
@@ -69,12 +72,19 @@ permalink: /404.html
 
 <body>
   <div class="background"></div>
-  <img class="logo" width="180" height="180" src="https://www.groomerbielsko.pl/404/logo.png">  
+  <img class="logo" width="180" height="180" src="https://www.lena.groomerbielsko.pl/404/logo.png">
   <main class="main"></main>
   <h2>404 Nie ma takiej strony</h2>
-  <p>Nie martw się 😊 Możesz wrócić do strony salonu klikając w poniższy przycisk</p>
-  <div class="margin-top"><a class="button" href="https://www.groomerbielsko.pl">Wróć do strony Salon Pielęgnacji Psów 'Lena'</a></div>
+  <p>Nie martw się 😊 Możesz wrócić do strony salonu klikając w poniższy przycisk lub czekając kilka sekund.</p>
+  <div class="margin-top"><a class="button" href="https://www.lena.groomerbielsko.pl">Wróć do strony Salon Pielęgnacji
+      Psów 'Lena'</a></div>
   </main>
 </body>
-
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    setTimeout(() => {
+      location.href = "https://www.lena.groomerbielsko.pl";
+    }, 3000);
+  });
+</script>
 </html>
