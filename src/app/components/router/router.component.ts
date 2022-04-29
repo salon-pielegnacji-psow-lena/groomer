@@ -26,7 +26,7 @@ export class RouterComponent implements AfterViewInit {
   }
   ngDoCheck(){
     setTimeout(() => {
-      location.href = '/groomer';
+      location.href = '/';
     }, 200); 
   }
 }
