@@ -173,16 +173,16 @@ export class GallerySiteComponent implements AfterViewInit {
   }
   initMetamorphosis() {
     for (let i = 1; i <= 18; i++) {
-      this.MaltanczykElements.push(new GalleryElement(`Maltańczyk`, [`assets/images/metamorfozy/1_maltanczyk/${i}.jpg`]));
+      this.MaltanczykElements.push(new GalleryElement(`Maltańczyk`, [`assets/images/metamorfozy/1_maltanczyk/${i}.webp`]));
     }
     for (let i = 1; i <= 20; i++) {
-      this.ShihTzuElements.push(new GalleryElement(`Shih Tzu`, [`assets/images/metamorfozy/2_shih_tzu/${i}.jpg`]));
+      this.ShihTzuElements.push(new GalleryElement(`Shih Tzu`, [`assets/images/metamorfozy/2_shih_tzu/${i}.webp`]));
     }
-    for (let i = 1; i <= 18; i++) {
-      this.YorkElements.push(new GalleryElement(`York`, [`assets/images/metamorfozy/3_york/${i}.jpg`]));
+    for (let i = 1; i <= 15; i++) {
+      this.YorkElements.push(new GalleryElement(`York`, [`assets/images/metamorfozy/3_york/${i}.webp`]));
     }
     for (let i = 1; i <= 5; i++) {
-      this.YorkBiewerElements.push(new GalleryElement(`York Biewer`, [`assets/images/metamorfozy/3_york_biewer/${i}.jpg`]));
+      this.YorkBiewerElements.push(new GalleryElement(`York Biewer`, [`assets/images/metamorfozy/3_york_biewer/${i}.webp`]));
     }
     for (let i = 1; i <= 2; i++) {
       this.HawanczykElements.push(new GalleryElement(`Hawańczyk`, [`assets/images/metamorfozy/4_hawanczyk/${i}.jpg`]));
