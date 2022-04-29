@@ -1,58 +1,3 @@
-<!-- <div class="site">
-    <main>
-        <h4>GALERIA</h4>
-        <p class="underline">Salon</p>
-        <table class="table-3">
-            <tbody>
-                <tr >
-                    <td class="salon">
-                        <img [src]="salonElements[0].images[0]" (click)="showGallerySalon(0)">
-                    </td>
-                    <td class="salon">
-                        <img [src]="salonElements[1].images[0]" (click)="showGallerySalon(1)">
-                    </td>
-                    <td class="salon">
-                        <img [src]="salonElements[2].images[0]" (click)="showGallerySalon(2)">
-                    </td>                    
-                </tr>
-            </tbody>
-        </table>
-        <table class="table-3">
-            <tbody>
-                <tr >
-                    <td class="salon">
-                        <img [src]="salonElements[3].images[0]" (click)="showGallerySalon(3)">
-                    </td>
-                    <td class="salon">
-                        <img [src]="salonElements[4].images[0]" (click)="showGallerySalon(4)">
-                    </td>
-                    <td class="salon">
-                        <img [src]="salonElements[5].images[0]" (click)="showGallerySalon(5)">
-                    </td>                    
-                </tr>
-            </tbody>
-        </table>
-        <p class="underline">Przed i Po</p>
-        <table class="table-2">
-            <tbody>
-                <tr >
-                    <div *ngFor="let el of beforeAfterElements; index as i">
-                        <td class="before-after before">
-                            <img src={{el.images[0]}} (click)="showGalleryBeforeAfter(i)">
-                        </td>
-                        <td class="before-after after">
-                            <img src={{el.images[1]}} (click)="showGalleryBeforeAfter(i)">
-                        </td>                        
-                    </div>
-                </tr>
-            </tbody>
-        </table>
-    </main>
-</div>
-<app-gallery [defaultHidden]="true" [(shown)]="popupShownGallerySalon" [currentElement]="currentElement" [elements]="salonElements"></app-gallery>
-<app-gallery [defaultHidden]="true" [(shown)]="popupShownGalleryBeforeAfter" [currentElement]="currentElement" [elements]="beforeAfterElements"></app-gallery> -->
-
-
 <div class="site">
     <main>
         <h4>GALERIA</h4> 
@@ -61,7 +6,7 @@
                 <tr>  
                     <td>
                         <div class="item-big before-after">                            
-                            <app-button [isBig]="false" (click)="showGalleryBeforeAfter(0)">Przed i po</app-button>
+                            <app-button [isBig]="false" (click)="showGalleryBeforeAfter()">Przed i po</app-button>
                             <div class="shadow"></div>
                         </div>
                     </td>
@@ -69,7 +14,7 @@
                 <tr>                   
                     <td>
                         <div class="item-small salon">
-                            <app-button [isBig]="false" (click)="showGallerySalon(0)">Salon</app-button>                           
+                            <app-button [isBig]="false" (click)="showGallerySalon()">Salon</app-button>                           
                         </div>
                     </td>     
                 </tr> 
@@ -169,13 +114,19 @@
                             <img [src]="BorderTerierElements[0].images[0]" >
                         </td>                    
                     </tr>
-                    <tr> 
-                        <td></td> 
+                    <tr>                          
                         <td (click)="showConcreteGalleryMetamorphosis('OwczarekSzetlandzkiElements')" class="methamorphosis">
                             <p>{{OwczarekSzetlandzkiElements[0].description}}</p>
                             <img [src]="OwczarekSzetlandzkiElements[0].images[0]" >
                         </td>
-                        <td></td>                   
+                        <td (click)="showConcreteGalleryMetamorphosis('PapillonElements')" class="methamorphosis">
+                            <p>{{PapillonElements[0].description}}</p>
+                            <img [src]="PapillonElements[0].images[0]" >
+                        </td>
+                        <td (click)="showConcreteGalleryMetamorphosis('PudelElements')" class="methamorphosis">
+                            <p>{{PudelElements[0].description}}</p>
+                            <img [src]="PudelElements[0].images[0]" >
+                        </td>                
                     </tr>
                 </tbody>
             </table> 
@@ -185,6 +136,6 @@
 
 
 
-<app-gallery [defaultHidden]="true" [(shown)]="popupShownGallerySalon" [elements]="salonElements"></app-gallery>
-<app-gallery [defaultHidden]="true" [(shown)]="popupShownGalleryBeforeAfter" [elements]="beforeAfterElements"></app-gallery>
+<app-gallery [defaultHidden]="true" [(shown)]="popupShownGallerySalon" [currentElement]="currentElement" [elements]="salonElements"></app-gallery>
+<app-gallery [defaultHidden]="true" [(shown)]="popupShownGalleryBeforeAfter" [currentElement]="currentElement" [elements]="beforeAfterElements"></app-gallery>
 <app-gallery [defaultHidden]="true" [(shown)]="popupShownGalleryMetamorphosis" [currentElement]="currentElement" [elements]="currentMetamorphosisElements"></app-gallery>

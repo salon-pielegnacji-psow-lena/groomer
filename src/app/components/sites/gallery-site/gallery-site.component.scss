@@ -1,26 +1,6 @@
 @import "../../../../scss/colors.scss";
 @import "../../../../scss/sizes.scss";
 
-// .before-base {
-//     color: white;
-//     z-index: 999;
-//     margin: 20px;
-//     position: absolute;
-//     font-weight: bold;
-// }
-// .before::before {
-//     content: "Przed";
-//     @extend .before-base;
-// }
-// .after::before {
-//     content: "Po";
-//     @extend .before-base;
-// }
-// .salon {
-//     background-size:cover;
-//     background-repeat: no-repeat;  
-//     max-width: 100%;   
-// }
 .table-2 img {
     background-size:cover;
     background-repeat: no-repeat;  
@@ -104,12 +84,12 @@ table {
     margin-top: -218px;    
 }
 .salon {
-    background-image: url("../../../../assets/images/gallery.jpg");
+    background-image: url("../../../../assets/images/salon/salon.webp");
     background-size: cover;
     background-repeat: no-repeat;   
 }
 .before-after {
-    background-image: url("../../../../assets/images/before-after.png");
+    background-image: url("../../../../assets/images/przedpo/before-after.webp");
     background-size: cover;
     background-repeat: no-repeat;   
 }
