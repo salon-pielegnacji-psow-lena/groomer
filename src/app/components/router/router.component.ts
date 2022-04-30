@@ -24,9 +24,7 @@ export class RouterComponent implements AfterViewInit {
       this.routingService.redirect(f);
     });
   }
-  ngDoCheck(){
-    setTimeout(() => {
-      location.href = '/';
-    }, 200); 
+  ngAfterContentInit() {
+    this.routingService.goBack();
   }
 }

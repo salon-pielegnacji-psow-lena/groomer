@@ -20,6 +20,9 @@ export class LayoutComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.routingService.replaceState();
+    setTimeout(() => {
+      this.routingService.resetHistoryCounter();
+    }, 1000);
   }
   @HostListener('window:scroll', ['$event.target']) onScroll(e: any) {
     this.scrollService.onScroll(e);

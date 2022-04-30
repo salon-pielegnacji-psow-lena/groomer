@@ -6,7 +6,7 @@ import { RouterComponent } from '../components/router/router.component';
 import { ScrollService } from './scroll.service';
 import { Section } from '../models/section';
 import { environment } from 'src/environments/environment';
-import { faHome, faMailBulk, faHandshake, faFemale, faDog, faCamera} from '@fortawesome/free-solid-svg-icons';
+import { faHome, faMailBulk, faHandshake, faFemale, faDog, faCamera } from '@fortawesome/free-solid-svg-icons';
 import { first } from 'rxjs/operators';
 import { HeaderService } from './header.service';
 
@@ -18,7 +18,7 @@ export class RoutingService {
   public static routes = [
     { path: "start", component: LayoutComponent, section: new Section("start", "galeria"), types: [environment.HEADER, environment.HOME], faIcon: faHome },
     { path: "galeria", component: LayoutComponent, section: new Section("galeria", "omnie"), types: [environment.HEADER, environment.HOME], faIcon: faCamera },
-    { path: "omnie", component: LayoutComponent, section: new Section("omnie", "oferta"), types: [environment.HEADER, environment.HOME], faIcon: faFemale },    
+    { path: "omnie", component: LayoutComponent, section: new Section("omnie", "oferta"), types: [environment.HEADER, environment.HOME], faIcon: faFemale },
     { path: "oferta", component: LayoutComponent, section: new Section("oferta", "wiecej"), types: [environment.HEADER, environment.HOME], faIcon: faHandshake },
     { path: "wiecej", component: LayoutComponent, section: new Section("wiecej", "kontakt"), types: [environment.HEADER, environment.HOME], faIcon: faDog },
     { path: "kontakt", component: LayoutComponent, section: new Section("kontakt", "footer"), types: [environment.HEADER, environment.HOME], faIcon: faMailBulk },
@@ -28,6 +28,7 @@ export class RoutingService {
 
   currentRoute = RoutingService.routes.find(r => r.path == "");
   currentUrl = "";
+  historyCounter: number = 0;
 
   constructor(private router: Router, private header: HeaderService, public location: Location, @Inject(DOCUMENT) private document: Document, private scrollService: ScrollService) { }
 
@@ -38,10 +39,10 @@ export class RoutingService {
       url = route?.path;
     }
     this.currentUrl = url;
-    if (route?.component != this.currentRoute?.component){
+    if (route?.component != this.currentRoute?.component) {
       this.router.navigateByUrl(url);
       this.currentRoute = route;
-    }  
+    }
     setTimeout(() => {
       try {
         this.scrollService.scrollToView(url, true)
@@ -53,5 +54,26 @@ export class RoutingService {
   }
   replaceState() {
     this.location.replaceState(`#${this.currentUrl}`);
+  }
+  goBack() {
+    if (navigator.userAgent.includes('Firefox')) {
+      history.go(-1);
+    }
+    else {
+      setTimeout(() => {
+        console.log(this.historyCounter)
+        if (this.historyCounter < 1) {
+          this.historyCounter++;
+          history.go(0);
+        }
+        else {
+          this.historyCounter = 0;
+          history.go(-1);
+        }
+      }, 500);
+    }
+  }
+  resetHistoryCounter() {
+    this.historyCounter = 0;
   }
 }
