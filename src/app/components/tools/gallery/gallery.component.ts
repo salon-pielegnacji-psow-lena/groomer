@@ -30,12 +30,13 @@ export class GalleryComponent implements OnInit {
       this.show();
     }
   }
-  show() {  
-    
+  show() {      
     if (this.elements.length > 0) {     
-      this.showError = false;
-      this.scrollService.setScroll(!this.shown);
+      this.showError = false;     
       this.shownChange.emit(this.shown);
+      setTimeout(() => {
+        this.scrollService.setScroll(!this.shown);
+      }, 300);
     }
     else {
       this.showError = true;

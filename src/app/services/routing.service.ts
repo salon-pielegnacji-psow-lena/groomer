@@ -60,10 +60,9 @@ export class RoutingService {
       history.go(-1);
     }
     else {
-      setTimeout(() => {
-        console.log(this.historyCounter)
+      setTimeout(() => {     
         if (this.historyCounter < 1) {
-          this.historyCounter++;
+          this.historyCounter++;          
           history.go(0);
         }
         else {
