@@ -17,25 +17,24 @@ export class OfferComponent implements OnInit {
   constructor(public language: LanguageService, private routingService: RoutingService) { }
 
   ngOnInit(): void {
-    this.cutting.push(new TableRow(1, ['York mini', 'od 100 zł']));
-    this.cutting.push(new TableRow(1, ['York, York Biewer', 'od 110 zł']));
-    this.cutting.push(new TableRow(1, ['Maltańczyk, Pudel Toy, Bolończyk', 'od 120 zł']));
-    this.cutting.push(new TableRow(1, ['Shih-Tzu, Hawańczyk, Maltipoo, Bichon', 'od 130 zł']));
-    this.cutting.push(new TableRow(1, ['West terier, Coton de Tulaer, Pudel min.', 'od 130 zł']));
-    this.cutting.push(new TableRow(1, ['Szpic min. Pomeranian', 'od 130 zł']));
-    this.cutting.push(new TableRow(1, ['Sznaucer min. Foxterier', 'od 130 zł']));
-    this.cutting.push(new TableRow(1, ['Cavapoo', 'od 140 zł']));
+    this.cutting.push(new TableRow(1, ['York, York Biewer', '110 - 120 zł']));
+    this.cutting.push(new TableRow(1, ['Maltańczyk, Pudel Toy, Bolończyk', '120 - 130 zł']));
+    this.cutting.push(new TableRow(1, ['Shih-Tzu, Hawańczyk, Maltipoo, Bichon', '130 - 140 zł']));
+    this.cutting.push(new TableRow(1, ['West terrier, Coton de Tulear, Pudel min.', '130 - 140 zł']));
+    this.cutting.push(new TableRow(1, ['Szpic min. Pomeranian', '130 - 140 zł']));
+    this.cutting.push(new TableRow(1, ['Sznaucer min. Foxterier', '130 - 140 zł']));
+    this.cutting.push(new TableRow(1, ['Cavapoo', '140 - 150 zł']));
     this.cutting.push(new TableRow(1, ['Pudel średni', 'od 150 zł']));
 
-    this.modeling.push(new TableRow(1, ['Cavalier', 'od 120 zł']));
+    this.modeling.push(new TableRow(1, ['Cavalier', '120 - 130 zł']));
     this.modeling.push(new TableRow(1, ['Jamnik szorstkowłosy', '140 - 160 zł']));
-    this.modeling.push(new TableRow(1, ['Jack Russell Terier', '150 - 160 zł']));
+    this.modeling.push(new TableRow(1, ['Jack Russell Terrier', '150 - 160 zł']));
     this.modeling.push(new TableRow(1, ['Sznaucer min.', '150 - 160 zł']));
-    this.modeling.push(new TableRow(1, ['Cairn terier, Foxterier', '170 - 190 zł']));
-    this.modeling.push(new TableRow(1, ['West terier, Terier szkocki', '170 - 190 zł']));
+    this.modeling.push(new TableRow(1, ['Cairn Terrier, Foxterier', '170 - 190 zł']));
+    this.modeling.push(new TableRow(1, ['West Terrier, Terier szkocki', '170 - 190 zł']));
 
-    this.other.push(new TableRow(1, ['KĄPIEL', 'od 70 zł']));
-    this.other.push(new TableRow(1, ['KĄPIEL pieski mini', 'od 60 zł']));
+    this.other.push(new TableRow(1, ['KĄPIEL', 'od 80 zł']));
+    this.other.push(new TableRow(1, ['KĄPIEL pieski mini', 'od 70 zł']));
     this.other.push(new TableRow(1, ['Rozczesanie skołtunionej sierści', '80 zł/godz.']));
     this.other.push(new TableRow(1, ['Obcięcie pazurów', 'od 15 zł']));
   }
