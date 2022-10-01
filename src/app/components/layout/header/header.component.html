@@ -1,8 +1,8 @@
 <header [ngClass]="headerClasses">
-  <section *ngIf="header.isShown()">
-    <app-logo></app-logo>
-    <app-menu></app-menu>
-    <app-brand></app-brand>
-    <div class="facebook"><app-facebook></app-facebook></div>
-  </section>
+  <section *ngIf="header.isShown()" class="center-icons">
+    <app-logo></app-logo>        
+    <app-brand></app-brand>  
+    <app-menu></app-menu> 
+    <div class="facebook"><app-facebook [class]="'HEADER'"></app-facebook></div>    
+  </section>   
 </header>

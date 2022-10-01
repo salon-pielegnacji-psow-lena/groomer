@@ -1,5 +1,6 @@
+<fa-icon (click)="toggle()" [icon]="iconMenu" class="menu-icon"></fa-icon>
 <div [ngClass]="menuClasses">
-    <ul>
+    <ul (click)="toggle()" class="{{menuClass}}">
         <li [id]="'menu-' + link.path" *ngFor="let link of links()" class="noselect" [ngClass]="{'active-link': scrollService.isActive(link.path)}" (click)="routingService.redirect(link.path)">
             <fa-icon [icon]="link.faIcon!" class="icon"></fa-icon>
             <div class="description" appTranslate>{{link.path}}</div>

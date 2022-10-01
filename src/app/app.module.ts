@@ -16,8 +16,6 @@ import { ExternalLinkComponent } from './components/tools/external-link/external
 import { LogoComponent } from './components/tools/logo/logo.component';
 import { PopupComponent } from './components/tools/popup/popup.component';
 import { GalleryComponent } from './components/tools/gallery/gallery.component';
-import { UserLayoutComponent } from './components/layout/user-layout/user-layout.component';
-import { UserMenuComponent } from './components/layout/user-menu/user-menu.component';
 import { MessageComponent } from './components/tools/message/message.component';
 import { LoaderComponent } from './components/tools/loader/loader.component';
 import { LanguageService } from './services/language.service';
@@ -51,8 +49,6 @@ import { GallerySiteComponent } from './components/sites/gallery-site/gallery-si
     LogoComponent,
     PopupComponent,
     GalleryComponent,
-    UserLayoutComponent,
-    UserMenuComponent,
     MessageComponent,
     LoaderComponent,
     GoToTopComponent,

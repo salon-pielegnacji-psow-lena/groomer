@@ -11,7 +11,8 @@ export class FacebookComponent implements OnInit {
 
   faFacebook = faFacebook;
   @Input() fontSize: number; 
-  @Input() top: number = -1;
+  //@Input() top: number = -1;
+  @Input() class: string = "";
   constructor() {
     this.fontSize = 25;    
   }
@@ -20,9 +21,9 @@ export class FacebookComponent implements OnInit {
   }
   getStyle() {    
     var style = `font-size: ${this.fontSize}px`;
-    if (this.top > -1) {
-      style += `;top: ${this.top}`;
-    }
+    // if (this.top > -1) {
+    //   style += `;top: ${this.top}px`;
+    // }
     return style;
   }
   goToFacebook(): void {

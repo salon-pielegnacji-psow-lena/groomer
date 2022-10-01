@@ -1,4 +1,5 @@
 @import "../../../../scss/sizes.scss";
+
 .header {
     box-shadow: 0.1px 0.1px 0.5px 0.1px;
     background-color: white;
@@ -9,33 +10,69 @@
     z-index: 1000;
     justify-items: center;
 }
-.slide-down {    
+
+.slide-down {
     animation: slide-down 0.5s forwards;
     animation-delay: 0s;
-    top: -71px;   
+    top: -71px;
 }
-.slide-up {   
+
+.slide-up {
     animation: slide-up 0.5s forwards;
     animation-delay: 0s;
-    top: 0px;   
+    top: 0px;
 }
+
 @keyframes slide-down {
-    100% { top: -1px; }
+    100% {
+        top: -1px;
+    }
 }
-@keyframes slide-up {     
-    100% { top: -71px; }    
+
+@keyframes slide-up {
+    100% {
+        top: -71px;
+    }
 }
+
 .facebook {
     margin-top: 17px;
 }
 
 @media screen and (max-width: $tablet-width) {
     .header {
+        box-shadow: none;
         height: 40px;
+        z-index: 999;
+    }
+    .center-icons .facebook {
+        margin-top: 1px;
+    }
+    .center-icons {
+        display: table;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        width: 90px;
     }
 }
+
 @media screen and (max-height: $mobile-landscape-min-height) and (min-width: $tablet-width) {
     .header {
+        box-shadow: none;
         height: 40px;
+        z-index: 999;
+    }
+    .center-icons .facebook {
+        margin-top: 1px;
+    }
+    .center-icons {
+        display: table;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        width: 90px;
     }
 }

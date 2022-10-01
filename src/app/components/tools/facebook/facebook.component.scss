@@ -20,11 +20,23 @@
 
 @media screen and (max-width: $tablet-width) {
     .icon-position{  
-        top: 1px;
+        top: 1px;  
+        position: inherit;    
     }
+    .HOME {
+        position: relative;
+        top: 40px;
+        float: right;
+    } 
 }
 @media screen and (max-height: $mobile-landscape-min-height) and (min-width: $tablet-width) {
     .icon-position{ 
-        top: 1px;
+        top: 1px; 
+        position: inherit;    
     }
+    .HOME {
+        position: relative;
+        top: 40px;
+        float: right;
+    } 
 }
