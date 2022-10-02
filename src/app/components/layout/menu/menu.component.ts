@@ -3,7 +3,7 @@ import { RoutingService } from 'src/app/services/routing.service';
 import { ScrollService } from 'src/app/services/scroll.service';
 import { environment } from 'src/environments/environment';
 import { LanguageService } from 'src/app/services/language.service';
-import { faBars  } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -25,16 +25,21 @@ export class MenuComponent implements OnInit {
   }
 
   toggle(): void {
-    console.log('toggle')
     if (this.menuClass == "") {
       this.menuClass = "slide-left";
     }
     else {
       this.menuClass = this.menuClass == "slide-left" ? "slide-right" : "slide-left";
     }
+    if (this.menuClass == "slide-left") {
+      this.scrollService.setScroll(false);
+    } 
+    else {
+      this.scrollService.setScroll(true);
+    }
   }
 
   links() {
-    return RoutingService.routes.filter(r => r.types?.includes(this.type)).map(({path, faIcon}) => ({ path, faIcon }));
+    return RoutingService.routes.filter(r => r.types?.includes(this.type)).map(({ path, faIcon }) => ({ path, faIcon }));
   }
 }
