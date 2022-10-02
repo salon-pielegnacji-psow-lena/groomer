@@ -45,6 +45,7 @@ export class RoutingService {
     }
     setTimeout(() => {
       try {
+        this.scrollService.setScroll(true);
         this.scrollService.scrollToView(url, true)
       }
       finally {

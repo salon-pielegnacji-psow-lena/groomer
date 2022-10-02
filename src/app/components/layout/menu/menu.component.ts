@@ -33,10 +33,10 @@ export class MenuComponent implements OnInit {
     }
     if (this.menuClass == "slide-left") {
       this.scrollService.setScroll(false);
-    } 
+    }
     else {
       this.scrollService.setScroll(true);
-    }
+    };
   }
 
   links() {
