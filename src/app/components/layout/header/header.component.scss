@@ -10,31 +10,26 @@
     z-index: 1000;
     justify-items: center;
 }
-
 .slide-down {
     animation: slide-down 0.5s forwards;
     animation-delay: 0s;
     top: -71px;
 }
-
 .slide-up {
     animation: slide-up 0.5s forwards;
     animation-delay: 0s;
     top: 0px;
 }
-
 @keyframes slide-down {
     100% {
         top: -1px;
     }
 }
-
 @keyframes slide-up {
     100% {
         top: -71px;
     }
 }
-
 .facebook {
     margin-top: 17px;
 }
@@ -56,6 +51,9 @@
         justify-content:space-around;
         width: 90px;
     }
+    .facebook {
+        margin-top: 17px;
+    }
 }
 
 @media screen and (max-height: $mobile-landscape-min-height) and (min-width: $tablet-width) {
@@ -74,5 +72,8 @@
         flex-direction: row;
         justify-content:space-around;
         width: 90px;
+    }
+    .facebook {
+        margin-top: 17px;
     }
 }

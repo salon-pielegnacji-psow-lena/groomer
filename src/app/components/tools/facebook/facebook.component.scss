@@ -20,8 +20,14 @@
 
 @media screen and (max-width: $tablet-width) {
     .icon-position{  
-        top: none;
+        top: 1px;
         position: relative;    
+    }
+    .icon {           
+        color: rgb(17,120,242);   
+        right: 0px;
+        padding: 0;  
+        border-radius: 0;
     }
     .HOME {
         position: relative;
@@ -31,8 +37,14 @@
 }
 @media screen and (max-height: $mobile-landscape-min-height) and (min-width: $tablet-width) {
     .icon-position{ 
-        top: none;
+        top: 1px;
         position: relative;    
+    }
+    .icon {              
+        color: rgb(17,120,242);   
+        right: 0px;
+        padding: 0;  
+        border-radius: 0;
     }
     .HOME {
         position: relative;
