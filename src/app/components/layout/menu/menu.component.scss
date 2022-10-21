@@ -12,6 +12,7 @@
     animation: slide-left 0.9s forwards;
     animation-delay: 0s;
     right: -303px;
+    z-index: 1000;
 }
 
 .slide-right {
@@ -56,20 +57,13 @@
 }
 
 .HOME-menu {
-    position: absolute;
-    list-style-type: none;
-    text-align: left;
-    padding-inline-start: 0;
-    z-index: 999;
-    left: 10%;
-    top: 150px;
+    @extend .HEADER-menu;
 }
 
 .HOME-menu>ul {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
     list-style: none;
     padding-inline-start: 0;
     margin-block-start: 0;
@@ -77,7 +71,7 @@
 }
 
 .HOME-menu li {
-    padding: 12px;
+    padding: 4px;
     cursor: pointer;
     display: flex;
     text-align: left;
@@ -88,20 +82,20 @@
 }
 
 .HOME-menu>ul .active-link {
-    border-left: 3px solid $name-color;
     pointer-events: none;
+    border-bottom: 2px solid  $name-color;
 }
 
 .HOME-menu .icon {
     display: table;
-    margin: 5px;
+    margin: 5px 2px;
     min-width: 20px;
     text-align: center;
 }
 
 .HOME-menu .description {
     display: table;
-    margin: 5px;
+    margin: 5px 2px;
 }
 
 @media screen and (max-width: $tablet-width) {
@@ -137,8 +131,6 @@
     }
     .HOME-menu >ul .active-link,
     .HEADER-menu >ul .active-link {
-        border-bottom: none;
-        border-left: 3px solid $main-color;
         pointer-events: none;
         color: $main-color;
     }
@@ -210,8 +202,6 @@
     }
     .HOME-menu >ul .active-link,
     .HEADER-menu >ul .active-link {
-        border-bottom: none;
-        border-left: 3px solid $main-color;
         pointer-events: none;
         color: $main-color;
     }
