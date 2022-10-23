@@ -3,7 +3,7 @@
 
 main {
     margin-top: 55px;  
-    width: 90%;
+    width: 100%;
 }
 .home-background {
     height: 87vh;
@@ -19,8 +19,7 @@ main {
     background-size: contain;
     box-shadow: 2px 2px 15px 1px $box-shadow-color; 
     width: 100%;    
-    border-radius: 3px; 
-    float: right;
+    border-radius: 3px;     
 }
 .brand {    
     position: absolute;

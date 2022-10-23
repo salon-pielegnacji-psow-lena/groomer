@@ -19,6 +19,7 @@
     animation: slide-right 0.9s forwards;
     animation-delay: 0s;
     right: -1px;
+    z-index: 1000;
 }
 
 .HEADER-menu {
@@ -103,7 +104,7 @@
     .HEADER-menu {
         display: flex;
         margin: 0;
-        font-size: 18px;
+        font-size: 18px;        
     }
     .HOME-menu ul,
     .HEADER-menu ul {
