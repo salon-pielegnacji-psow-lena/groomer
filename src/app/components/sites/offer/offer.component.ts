@@ -30,7 +30,7 @@ export class OfferComponent implements OnInit {
     this.modeling.push(new TableRow(1, ['Cavalier King Charles Spaniel', '130 - 140 zł']));
     this.modeling.push(new TableRow(1, ['Jamnik szorstkowłosy (króliczy ,miniatura, standard)', '150 - 170 zł']));
     this.modeling.push(new TableRow(1, ['Jack Russell Terrier', '160 - 170 zł']));
-    this.modeling.push(new TableRow(1, ['Sznaucer min.', '170 - 180 zł']));
+    this.modeling.push(new TableRow(1, ['Sznaucer min.', '160 - 180 zł']));
     this.modeling.push(new TableRow(1, ['Cairn Terrier, Foxterier', '170 - 190 zł']));
     this.modeling.push(new TableRow(1, ['West Highland White Terrier, Terier Szkocki ', '180 - 190 zł']));
 
