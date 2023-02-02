@@ -63,7 +63,7 @@ table {
 .item-small {
     @extend .item;
     height: 250px;
-    max-width: 526px;
+    max-width: 497px;
 }
 .item-small:first-child {
     padding-top: 30px;  
@@ -72,6 +72,12 @@ table {
     @extend .item;
     height: 240px;
     max-width: 526px;
+}
+.item-salon {
+    @extend .item;
+     height: 420px;
+     max-width: 497px;  
+     padding-top: 120px;   
 }
 .item-big:first-child {
     padding-top: 170px;  
@@ -84,8 +90,8 @@ table {
     margin-top: -218px;    
 }
 .salon {
-    background-image: url("../../../../assets/images/salon/salon.webp");
-    background-size: cover;
+    background-image: url("../../../../assets/images/salon/salon.jpg");
+    background-size: contain;
     background-repeat: no-repeat;   
 }
 .before-after {

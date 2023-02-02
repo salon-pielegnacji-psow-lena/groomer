@@ -138,7 +138,7 @@ export class GallerySiteComponent implements AfterViewInit {
     this.popupShownGalleryMetamorphosis = true;
   }
   initSalon() {
-    for (let i = 1; i <= 6; i++) {
+    for (let i = 1; i <= 11; i++) {
       this.salonElements.push(new GalleryElement("", [`assets/images/salon/salon${i}.jpg`]));
     }
   }
