@@ -91,7 +91,7 @@ table {
 }
 .salon {
     background-image: url("../../../../assets/images/salon/salon.jpg");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;   
 }
 .before-after {
@@ -119,5 +119,5 @@ table {
     td {
         width: 95%;
         display: table;
-    }    
+    }   
 }
