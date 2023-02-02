@@ -3,7 +3,7 @@
     <fa-icon *ngIf="shown" class="close-icon" (click)="hide()" [icon]="faTimes"></fa-icon>
     <fa-icon *ngIf="shown && elements.length > 1" class="left-icon" (click)="goLeft()" [icon]="faAngleLeft"></fa-icon>
     <fa-icon *ngIf="shown && elements.length > 1" class="right-icon" (click)="goRight()" [icon]="faAngleRight"></fa-icon>
-    <main *ngIf="shown" class="content">
+    <main *ngIf="shown" class="content noselect">
         <div *ngFor="let element of elements; index as i">
             <section *ngIf="shown && i == currentElement">
                 <div [ngClass]="{'content-img': element.images.length == 1, 'content-multi-img': element.images.length > 1}">
