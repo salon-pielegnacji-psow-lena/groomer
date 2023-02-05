@@ -176,35 +176,35 @@ export class GallerySiteComponent implements AfterViewInit {
   }
   initMetamorphosis() {
     for (let i = 0; i <= 18; i++) {
-      this.addMetamorphosis(i, `Maltańczyk`, `assets/images/metamorfozy/1_maltanczyk/`, this.MaltanczykElements);     
+      this.addMetamorphosis(i, `Maltańczyki`, `assets/images/metamorfozy/1_maltanczyk/`, this.MaltanczykElements);     
     }
 
     for (let i = 0; i <= 19; i++) {
       this.addMetamorphosis(i, `Shih Tzu`, `assets/images/metamorfozy/2_shih_tzu/`, this.ShihTzuElements);      
     }
     
-    for (let i = 0; i <= 14; i++) {
-      this.addMetamorphosis(i, `Yorkshire Terrier`, `assets/images/metamorfozy/3_york/`, this.YorkElements);      
+    for (let i = 0; i <= 16; i++) {
+      this.addMetamorphosis(i, `Yorkshire Terriery`, `assets/images/metamorfozy/3_york/`, this.YorkElements);      
     }
     
     for (let i = 0; i <= 5; i++) {
-      this.addMetamorphosis(i, `York Biewer`, `assets/images/metamorfozy/3_york_biewer/`, this.YorkBiewerElements);   
+      this.addMetamorphosis(i, `YT Biewery`, `assets/images/metamorfozy/3_york_biewer/`, this.YorkBiewerElements);   
     }
   
     for (let i = 0; i <= 2; i++) {
-      this.addMetamorphosis(i, `Hawańczyk`, `assets/images/metamorfozy/4_hawanczyk/`, this.HawanczykElements);   
+      this.addMetamorphosis(i, `Hawańczyki`, `assets/images/metamorfozy/4_hawanczyk/`, this.HawanczykElements);   
     }
   
     for (let i = 0; i <= 3; i++) {
-      this.addMetamorphosis(i, `Bichon`, `assets/images/metamorfozy/5_bichon/`, this.BichonElements);   
+      this.addMetamorphosis(i, `Bichony`, `assets/images/metamorfozy/5_bichon/`, this.BichonElements);   
     }
   
     for (let i = 0; i <= 1; i++) {
-      this.addMetamorphosis(i, `Bolonka`, `assets/images/metamorfozy/6_bolonka/`, this.BolonkaElements);   
+      this.addMetamorphosis(i, `Bolonki`, `assets/images/metamorfozy/6_bolonka/`, this.BolonkaElements);   
     }
   
-    for (let i = 0; i <= 2; i++) {
-      this.addMetamorphosis(i, `Maltipoo`, `assets/images/metamorfozy/7_maltipoo/`, this.MaltipooElements);   
+    for (let i = 0; i <= 3; i++) {
+      this.addMetamorphosis(i, `Mixy Maltipoo`, `assets/images/metamorfozy/7_maltipoo/`, this.MaltipooElements);   
     }
   
     for (let i = 0; i <= 1; i++) {
@@ -212,27 +212,27 @@ export class GallerySiteComponent implements AfterViewInit {
     }
 
     for (let i = 0; i <= 7; i++) {
-      this.addMetamorphosis(i, `Pomeranian`, `assets/images/metamorfozy/9_pomeranian/`, this.PomeranianElements);   
+      this.addMetamorphosis(i, `Pomeraniany`, `assets/images/metamorfozy/9_pomeranian/`, this.PomeranianElements);   
     }
    
     for (let i = 0; i <= 1; i++) {
-      this.addMetamorphosis(i, `Chiński Grzywacz`, `assets/images/metamorfozy/10_chinski_grzywacz/`, this.ChinskiGrzywaczElements); 
+      this.addMetamorphosis(i, `Chińske Grzywacze`, `assets/images/metamorfozy/10_chinski_grzywacz/`, this.ChinskiGrzywaczElements); 
     }
 
     for (let i = 0; i <= 3; i++) {
-      this.addMetamorphosis(i, `Cavalier`, `assets/images/metamorfozy/11_cavalier/`, this.CavalierElements);   
+      this.addMetamorphosis(i, `Cavaliery`, `assets/images/metamorfozy/11_cavalier/`, this.CavalierElements);   
     }
    
     for (let i = 0; i <= 7; i++) {
-      this.addMetamorphosis(i, `West White Terrier`, `assets/images/metamorfozy/12_west/`, this.WestElements); 
+      this.addMetamorphosis(i, `West White Terriery`, `assets/images/metamorfozy/12_west/`, this.WestElements); 
     }
 
-    for (let i = 0; i <= 4; i++) {
-      this.addMetamorphosis(i, `Sznaucer min`, `assets/images/metamorfozy/13_sznaucer_min/`, this.SznaucerMinElements);  
+    for (let i = 0; i <= 5; i++) {
+      this.addMetamorphosis(i, `Sznaucery min`, `assets/images/metamorfozy/13_sznaucer_min/`, this.SznaucerMinElements);  
     }
     
     for (let i = 0; i <= 2; i++) {
-      this.addMetamorphosis(i, `Cairn Terrier`, `assets/images/metamorfozy/14_cair_terier/`, this.CairTerierElements);
+      this.addMetamorphosis(i, `Cairn Terriery`, `assets/images/metamorfozy/14_cair_terier/`, this.CairTerierElements);
     }
     
     for (let i = 0; i <= 2; i++) {
@@ -240,23 +240,23 @@ export class GallerySiteComponent implements AfterViewInit {
     }
   
     for (let i = 0; i <= 1; i++) {
-      this.addMetamorphosis(i, `Jamnik Szrostkowłosy`, `assets/images/metamorfozy/16_jamnik_szorstkowlosy/`, this.JamnikSzrostkowlosyElements);  
+      this.addMetamorphosis(i, `Jamniki Szrostkowłose`, `assets/images/metamorfozy/16_jamnik_szorstkowlosy/`, this.JamnikSzrostkowlosyElements);  
     }
     
     for (let i = 0; i <= 1; i++) {
-      this.addMetamorphosis(i, `Border Terrier`, `assets/images/metamorfozy/17_border_terier/`, this.BorderTerierElements);   
+      this.addMetamorphosis(i, `Border Terriery`, `assets/images/metamorfozy/17_border_terier/`, this.BorderTerierElements);   
     }
     
     for (let i = 0; i <= 2; i++) {
-      this.addMetamorphosis(i, `Owczarek Szetlandzki`, `assets/images/metamorfozy/18_owczarek_szetlandzki/`, this.OwczarekSzetlandzkiElements);  
+      this.addMetamorphosis(i, `Owczarki Szetlandzkie`, `assets/images/metamorfozy/18_owczarek_szetlandzki/`, this.OwczarekSzetlandzkiElements);  
     }
    
     for (let i = 0; i <= 1; i++) {
-      this.addMetamorphosis(i, `Papillon`, `assets/images/metamorfozy/19_papillon/`, this.PapillonElements);  
+      this.addMetamorphosis(i, `Papillony`, `assets/images/metamorfozy/19_papillon/`, this.PapillonElements);  
     }
    
     for (let i = 0; i <= 1; i++) {
-      this.addMetamorphosis(i, `Pudel`, `assets/images/metamorfozy/20_pudel/`, this.PudelElements);   
+      this.addMetamorphosis(i, `Pudle`, `assets/images/metamorfozy/20_pudel/`, this.PudelElements);   
     }
   }
   addMetamorphosis(i: number, name: string, images: string, concreteArray: GalleryElement[]) {

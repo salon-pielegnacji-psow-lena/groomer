@@ -17,7 +17,7 @@ export class OfferComponent implements OnInit {
   constructor(public language: LanguageService, private routingService: RoutingService) { }
 
   ngOnInit(): void {
-    this.cutting.push(new TableRow(1, ['Yorkshire Terrier, Biewer Yorkshire Terrier', 'od 120 zł']));
+    this.cutting.push(new TableRow(1, ['Yorkshire Terrier, YT Biewer', 'od 120 zł']));
     this.cutting.push(new TableRow(1, ['Maltańczyk, Pudel Toy, Bolończyk', 'od 130 zł']));
     this.cutting.push(new TableRow(1, ['Shih-Tzu, Hawańczyk, Bichon', 'od 140 zł']));
     this.cutting.push(new TableRow(1, ['West Highland White Terrier, Pudel min. Coton de Tulear', 'od 140 zł']));

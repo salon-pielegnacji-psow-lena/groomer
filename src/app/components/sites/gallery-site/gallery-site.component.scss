@@ -27,6 +27,18 @@
 .table-3 td {
     width: 33.3%;
 }
+td > p {
+    color: black;
+    border-radius: 1px;
+    padding: 4px 10px;
+    background-color: white;
+    margin: 250px 35px;
+    position: absolute;
+    z-index: 888;
+    width: 171px;
+    display: table;
+    box-shadow: 0.6px 0.6px 3px 0.6px $box-shadow-color-medium; 
+}
 @media screen and (max-width: $tablet-width) {
     .table-2 tr {
         display: inline;
