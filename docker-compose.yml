@@ -1,0 +1,15 @@
+version: '3.4'
+
+services: 
+  groomer:
+    container_name: groomer
+    image: ${DOCKER_REGISTRY-}groomer
+    restart: on-failure
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
+    volumes:    
+      - ./src:/app/src
+      - ./dist:/app/dist

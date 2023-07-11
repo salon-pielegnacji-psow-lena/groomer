@@ -110,5 +110,7 @@
       }
     }
   },
-  "defaultProject": "groomer"
+  "cli": {
+    "analytics": false
+  }
 }
