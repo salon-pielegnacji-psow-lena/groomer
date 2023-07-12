@@ -39,7 +39,7 @@ export class OfferComponent implements OnInit {
     this.other.push(new TableRow(1, ['Kąpiel (z suszeniem i wyczesaniem)', 'od 90 zł']));
     this.other.push(new TableRow(1, ['Kąpiel pieski mini (z suszeniem i wyczesaniem)', 'od 80 zł']));
     this.other.push(new TableRow(1, ['Obcięcie pazurów', '20 zł']));
-    this.other.push(new TableRow(1, ['Wyczesanie podszerstka', '20 zł/godz']));
+    this.other.push(new TableRow(1, ['Wyczesanie podszerstka', '80 zł/godz']));
     this.other.push(new TableRow(1, ['Rozczesanie skołtunionej sierści (dodatkowo płatne)', '100 zł/godz']));
     this.other.push(new TableRow(1, ['Golenie psa z filcu (dodatkowo płatne)', '+50% ceny podst']));
     this.other.push(new TableRow(1, ['Wyczesanie - drobne kołtuny', '+20zł do ceny podst']));
