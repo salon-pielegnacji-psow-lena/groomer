@@ -70,7 +70,7 @@ export class OfferComponent implements OnInit {
     this.other.push(new TableRow(1, ['Golenie psa z filcu (dodatkowo płatne)', '+50% ceny podst'], false, false));
     this.other.push(new TableRow(2, [this.additionalInfo], true, true));
     this.other.push(new TableRow(1, ['Wyczesanie - drobne kołtuny', '+20zł do ceny podst'], false, false));
-    this.other.push(new TableRow(2, [this.additionalInfo], true, true));
+    this.other.push(new TableRow(2, [''], true, true));
 
   }
   goToContact() {
