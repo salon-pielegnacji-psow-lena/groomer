@@ -5,7 +5,7 @@
         </tr> 
     </thead>
     <tbody>
-        <tr *ngFor="let row of rows">
+        <tr [ngClass]="{'border-tr': row.border}" *ngFor="let row of rows">
             <td [ngClass]="getTdClasses(row, r)" [attr.colspan]="row.colspan" *ngFor="let r of row.data; index as i"><div class="td-header">{{headers[i]}}</div>{{r}}</td>
         </tr>
     </tbody>

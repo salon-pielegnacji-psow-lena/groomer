@@ -14,6 +14,7 @@ export class TableComponent implements OnInit {
   @Input() firstTdClass = "";
   @Input() lastTdClass = "";
   classes: string = "table ";
+  rowClasses: string = "";
 
   constructor() { }
 
@@ -22,13 +23,16 @@ export class TableComponent implements OnInit {
       this.classes += "border"
     }
   }
-  getTdClasses(row: TableRow, td: any){
-    if (td == row.data[0]){
-      return this.firstTdClass;
+  getTdClasses(row: TableRow, td: any) {
+    const border = row.border ? ' border-tr' : '';
+    const small = row.small ? ' small' : '';
+    this.rowClasses += border;
+    if (td == row.data[0] && row.data.length > 1 ){
+      return `${this.firstTdClass} ${small}`;
     }
     if (td == row.data[row.data.length - 1]){
-      return this.lastTdClass;
+      return `${this.lastTdClass} ${small}`;
     }
-    return "";
+    return small;
   }
 }
