@@ -13,7 +13,7 @@ export class OfferComponent implements OnInit {
   cutting: TableRow[] = [];
   modeling: TableRow[] = [];
   other: TableRow[] = [];
-  additionalInfo: string = "(Jeśli pies jest skołtuniony, to doliczam 20zł do podanej ceny)";
+  additionalInfo: string = "drobne kołtuny +20zł";
 
   constructor(public language: LanguageService, private routingService: RoutingService) { }
 
@@ -41,7 +41,7 @@ export class OfferComponent implements OnInit {
     this.cutting.push(new TableRow(2, [''], true, true));
 
     this.modeling.push(new TableRow(2, [''], true, true));
-    this.modeling.push(new TableRow(1, ['Cavalier King Charles Spaniel', '130 - 140 zł'], false, false));
+    this.modeling.push(new TableRow(1, ['Cavalier King Charles Spaniel', '130 - 150 zł'], false, false));
     this.modeling.push(new TableRow(2, [this.additionalInfo], true, true));
     this.modeling.push(new TableRow(1, ['Jamnik szorstkowłosy (króliczy ,miniatura, standard)', '160 - 170 zł'], false, false));
     this.modeling.push(new TableRow(2, [this.additionalInfo], true, true));
@@ -57,24 +57,16 @@ export class OfferComponent implements OnInit {
     this.modeling.push(new TableRow(2, [''], true, true));
 
     this.other.push(new TableRow(2, [''], true, true));
-    this.other.push(new TableRow(1, ['Kąpiel (z suszeniem i wyczesaniem)', 'od 90 zł'], false, false));
-    this.other.push(new TableRow(2, [this.additionalInfo], true, true));
-    this.other.push(new TableRow(1, ['Kąpiel pieski mini (z suszeniem i wyczesaniem)', 'od 80 zł'], false, false));
-    this.other.push(new TableRow(2, [this.additionalInfo], true, true));
-    this.other.push(new TableRow(1, ['Obcięcie pazurów', '20 zł'], false, false));
-    this.other.push(new TableRow(2, [this.additionalInfo], true, true));
-    this.other.push(new TableRow(1, ['Wyczesanie podszerstka', '80 zł/godz'], false, false));
-    this.other.push(new TableRow(2, [this.additionalInfo], true, true));
-    this.other.push(new TableRow(1, ['Rozczesanie skołtunionej sierści (dodatkowo płatne)', '100 zł/godz'], false, false));
-    this.other.push(new TableRow(2, [this.additionalInfo], true, true));
-    this.other.push(new TableRow(1, ['Golenie psa z filcu (dodatkowo płatne)', '+50% ceny podst'], false, false));
-    this.other.push(new TableRow(2, [this.additionalInfo], true, true));
-    this.other.push(new TableRow(1, ['Wyczesanie - drobne kołtuny', '+20zł do ceny podst'], false, false));
-    this.other.push(new TableRow(2, [''], true, true));
+    this.other.push(new TableRow(1, ['Kąpiel (z suszeniem i wyczesaniem)', 'od 90 zł'], true, false));
+    this.other.push(new TableRow(1, ['Kąpiel pieski mini (z suszeniem i wyczesaniem)', 'od 80 zł'], true, false));
+    this.other.push(new TableRow(1, ['Obcięcie pazurów', '20 zł'], true, false));
+    this.other.push(new TableRow(1, ['Wyczesanie podszerstka', '80 zł/godz'], true, false));
+    this.other.push(new TableRow(1, ['Rozczesanie skołtunionej sierści (dodatkowo płatne)', '100 zł/godz'], true, false));
+    this.other.push(new TableRow(1, ['Golenie psa z filcu (dodatkowo płatne)', '+50% ceny podst'], true, false));
+    this.other.push(new TableRow(1, ['Wyczesanie - drobne kołtuny', '+20zł do ceny podst'], true, false));
 
   }
   goToContact() {
     this.routingService.redirect('contact');
   }
-
 }
