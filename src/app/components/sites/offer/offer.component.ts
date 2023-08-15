@@ -37,9 +37,7 @@ export class OfferComponent implements OnInit {
     this.cutting.push(new TableRow(2, [this.additionalInfo], true, true));
     this.cutting.push(new TableRow(1, ['Pudel średni', 'od 160 zł'], false, false));
     this.cutting.push(new TableRow(2, [this.additionalInfo], true, true));
-    this.cutting.push(new TableRow(1, ['Drobne kołtuny', '+20 zł'], false, false));
-    this.cutting.push(new TableRow(2, [''], true, true));
-
+ 
     this.modeling.push(new TableRow(2, [''], true, true));
     this.modeling.push(new TableRow(1, ['Cavalier King Charles Spaniel', '130 - 150 zł'], false, false));
     this.modeling.push(new TableRow(2, [this.additionalInfo], true, true));
@@ -53,8 +51,6 @@ export class OfferComponent implements OnInit {
     this.modeling.push(new TableRow(2, [this.additionalInfo], true, true));
     this.modeling.push(new TableRow(1, ['West Highland White Terrier, Terier Szkocki ', '180 - 200 zł'], false, false));
     this.modeling.push(new TableRow(2, [this.additionalInfo], true, true));
-    this.modeling.push(new TableRow(1, ['Drobne kołtuny', '+20 zł'], false, false));
-    this.modeling.push(new TableRow(2, [''], true, true));
 
     this.other.push(new TableRow(2, [''], true, true));
     this.other.push(new TableRow(1, ['Kąpiel (z suszeniem i wyczesaniem)', 'od 90 zł'], true, false));
