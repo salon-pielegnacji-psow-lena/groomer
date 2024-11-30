@@ -1,9 +1,11 @@
 <header [ngClass]="headerClasses">
   <section *ngIf="header.isShown()" class="center-icons">
+    <div class="facebook"><app-facebook [class]="'HEADER'"></app-facebook></div>
     <app-logo></app-logo>        
     <app-brand></app-brand>  
     <app-menu></app-menu> 
-    <div class="facebook"><app-facebook [class]="'HEADER'"></app-facebook></div>
-    <fa-icon class="fb-small" (click)="goToFacebook()" [icon]="faFacebook"></fa-icon>
+    <div class="center-fb">
+      <fa-icon class="fb-small" (click)="goToFacebook()" [icon]="faFacebook"></fa-icon>
+    </div>
   </section>   
 </header>

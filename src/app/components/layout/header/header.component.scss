@@ -44,6 +44,11 @@
     display: none;
 }
 
+.center-fb {
+    margin: auto;
+    display: table;
+}
+
 @media screen and (max-width: $tablet-width) {
     .header {
         box-shadow: none;
