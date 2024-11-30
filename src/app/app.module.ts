@@ -32,6 +32,7 @@ import { TranslateDirective } from './directives/translate.directive';
 import { PawsComponent } from './components/tools/paws/paws.component';
 import { FacebookComponent } from './components/tools/facebook/facebook.component';
 import { GallerySiteComponent } from './components/sites/gallery-site/gallery-site.component';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { GallerySiteComponent } from './components/sites/gallery-site/gallery-si
     TranslateDirective,
     PawsComponent,
     FacebookComponent,
-    GallerySiteComponent
+    GallerySiteComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,

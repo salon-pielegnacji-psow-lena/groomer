@@ -1,0 +1,10 @@
+<div *ngIf="show" class="news">
+    <h1>Nowy adres salonu! 😍</h1>
+    <div class="image-container">
+        <img class="news-img" src="assets/images/news.webp" alt="">
+    </div>
+    <div class="button-container"> 
+        <label class="checkbox-label"><input class="checkbox" type="checkbox" id="checkbox_accepted" name="accepted" (change)="setAccepted()" [value]="accepted" /> <span class="label-text"> Nie pokazuj tego więcej</span></label>
+        <app-button (click)="accept()">OK</app-button>
+    </div>
+</div>
