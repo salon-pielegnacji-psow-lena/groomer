@@ -47,6 +47,13 @@
     margin-top: 15px;
     display: flex;
     flex-direction: column;
+    position: fixed;
+    bottom: 10px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    left: 50%;
+    background-color: rgb(243, 230, 206);
+    border-radius: 5px;
 }
 
 .checkbox {
