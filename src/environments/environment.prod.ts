@@ -7,7 +7,7 @@ export const environment = {
   HOME: "HOME",
   USER: "USER",
   ADMIN: "ADMIN",
-  Copy: "Salon Pielęgnacji Psów Lena Beata Zdrowak Bielsko-Biała, ul. Wapienna 16",
+  Copy: "Salon Pielęgnacji Psów Lena Beata Zdrowak Bielsko-Biała, ul. Żywiecka 23B",
   Standard: "standard",
   Info: "info",
   Warning: "warning",
