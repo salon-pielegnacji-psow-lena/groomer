@@ -18,8 +18,8 @@ export class RoutingService {
   public static routes = [
     { path: "start", component: LayoutComponent, section: new Section("start", "galeria"), types: [environment.HEADER, environment.HOME], faIcon: faHome },
     { path: "galeria", component: LayoutComponent, section: new Section("galeria", "omnie"), types: [environment.HEADER, environment.HOME], faIcon: faCamera },
-    { path: "omnie", component: LayoutComponent, section: new Section("omnie", "oferta"), types: [environment.HEADER, environment.HOME], faIcon: faFemale },
-    { path: "oferta", component: LayoutComponent, section: new Section("oferta", "wiecej"), types: [environment.HEADER, environment.HOME], faIcon: faHandshake },
+    { path: "omnie", component: LayoutComponent, section: new Section("omnie", "uslugi"), types: [environment.HEADER, environment.HOME], faIcon: faFemale },
+    { path: "uslugi", component: LayoutComponent, section: new Section("uslugi", "wiecej"), types: [environment.HEADER, environment.HOME], faIcon: faHandshake },
     { path: "wiecej", component: LayoutComponent, section: new Section("wiecej", "kontakt"), types: [environment.HEADER, environment.HOME], faIcon: faDog },
     { path: "kontakt", component: LayoutComponent, section: new Section("kontakt", "footer"), types: [environment.HEADER, environment.HOME], faIcon: faMailBulk },
     { path: "", component: RouterComponent, section: new Section("", "") },

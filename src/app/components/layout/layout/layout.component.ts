@@ -13,7 +13,7 @@ export class LayoutComponent implements AfterViewInit {
   @ViewChild('omnie') omnie!: ElementRef;
   @ViewChild('kontakt') kontakt!: ElementRef;
   @ViewChild('wiecej') wiecej!: ElementRef;
-  @ViewChild('oferta') oferta!: ElementRef;
+  @ViewChild('uslugi') uslugi!: ElementRef;
   @ViewChild('footer') footer!: ElementRef;
 
   constructor(private routingService: RoutingService, private scrollService: ScrollService) { }
