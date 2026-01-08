@@ -19,7 +19,7 @@ export class OfferComponent implements OnInit {
 
   ngOnInit(): void {
     this.cutting.push(new TableRow(2, [''], true, true));
-    this.cutting.push(new TableRow(1, ['Yorkshire Terrier, YT Biewer', '170 zł'], false, false));
+    this.cutting.push(new TableRow(1, ['Yorkshire Terrier, YT Biewer i inne do 4kg', '170 zł'], false, false));
     this.cutting.push(new TableRow(2, [this.additionalInfo], true, true));
     this.cutting.push(new TableRow(1, ['Maltańczyk, Pudel Toy, Bolończyk', '180 zł'], false, false));
     this.cutting.push(new TableRow(2, [this.additionalInfo], true, true));
@@ -32,8 +32,6 @@ export class OfferComponent implements OnInit {
     this.cutting.push(new TableRow(1, ['Pomeranian, Szpic min. (korekta szaty)', '180 zł'], false, false));
     this.cutting.push(new TableRow(2, [this.additionalInfo], true, true));
     this.cutting.push(new TableRow(1, ['Pudel średni, Mix- Cavapoo, Cockapoo, Shihpoo itp.', '200 zł'], false, false));
-    this.cutting.push(new TableRow(2, [this.additionalInfo], true, true));
-    this.cutting.push(new TableRow(1, ['Pieski mini < 2kg - mini York, Chihuahua długowłosa itp.', '160 zł'], false, false));
     this.cutting.push(new TableRow(2, [this.additionalInfo], true, true));
     this.cutting.push(new TableRow(1, ['Owczarek szetlandzki < 10kg oraz podobne (kąpiel, wyczesanie ,kosm.)', 'od 200 zł'], false, false));
     this.cutting.push(new TableRow(2, [this.additionalInfo], true, true));
